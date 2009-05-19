@@ -1,0 +1,29 @@
+					/*********************************************
+					 *	   UNIVERSIDADE  FEDERAL  DA  PARAIBMA    *
+					 *		 ARQUITETURA DE COMPUTADORES II      *
+					 *	    	        						 *
+					 *                   MIC				     *
+					 *											 *
+					 *	  ALUNO: LUCAS GAMBMARRA  MAT:10711005    *
+					 *********************************************/
+ 
+ /**********
+  *  SelectMem: logica sequencial.So separa os bits.  
+  *												  
+  **********/  
+
+module SelectMem(
+	input logic 	MEM[2:0],
+	output logic Read,Fetch,Write
+);
+
+// This construct should be used to infer purely combinational logic.
+always_comb
+begin
+	// Statements
+	Write = MEM[2];
+	Read  = MEM[1];
+	Fetch = MEM[0];
+end
+
+endmodule

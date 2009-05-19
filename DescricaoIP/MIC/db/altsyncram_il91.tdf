@@ -1,0 +1,34 @@
+--altsyncram CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" CLOCK_ENABLE_INPUT_A="BYPASS" CLOCK_ENABLE_OUTPUT_A="BYPASS" CYCLONEII_M4K_COMPATIBILITY="ON" DEVICE_FAMILY="Stratix II" ENABLE_RUNTIME_MOD="YES" INIT_FILE="instrucoes.mif" INSTANCE_NAME="NONE" LOW_POWER_MODE="AUTO" NUMWORDS_A=512 OPERATION_MODE="ROM" OUTDATA_ACLR_A="NONE" OUTDATA_REG_A="CLOCK1" WIDTH_A=39 WIDTH_BYTEENA_A=1 WIDTHAD_A=9 address_a clock0 q_a CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 8.0 cbx_altsyncram 2008:03:26:267331 cbx_cycloneii 2008:02:23:252825 cbx_lpm_add_sub 2008:03:09:257947 cbx_lpm_compare 2008:02:23:252825 cbx_lpm_decode 2008:02:23:252825 cbx_lpm_mux 2008:02:23:252825 cbx_mgl 2008:04:11:273944 cbx_stratix 2008:02:23:252825 cbx_stratixii 2008:02:23:252825 cbx_stratixiii 2008:04:23:278548 cbx_util_mgl 2008:04:15:275689  VERSION_END
+
+
+-- Copyright (C) 1991-2008 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = 
+SUBDESIGN altsyncram_il91
+( 
+	address_a[8..0]	:	input;
+	clock0	:	input;
+	q_a[38..0]	:	output;
+) 
+
+BEGIN 
+	ASSERT (0) 
+	REPORT "Must connect clock1 port of altsyncram megafunction when using current set of parameters"
+	SEVERITY ERROR;
+END;
+--ERROR FILE

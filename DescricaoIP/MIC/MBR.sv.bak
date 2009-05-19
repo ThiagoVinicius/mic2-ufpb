@@ -1,0 +1,72 @@
+module MBR(
+    input logic enaToA,
+    input logic toSigned,
+    input logic reset,
+    input logic clk,
+    input logic FETCH,
+    
+    input logic signed [7:0]inMBR,
+    
+    output logic unsigned[7:0]MBR2MPC,
+    output logic signed [3:0][7:0] saidaMBR 
+    
+);
+
+	logic signed   [7:0]MBR_Reg = 8'b00000000;
+	logic unsigned leNaProximaSubida = 1'b0;
+
+	always_ff @ (posedge clk) begin 
+		if(reset)begin
+			MBR_Reg  		 <=  8'b00000000;
+        end else begin        
+			if(FETCH) begin
+				leNaProximaSubida <= 1'b1;
+			end 
+			
+			if(leNaProximaSubida > 3'b000)begin
+					MBR_Reg           <= inMBR;
+					if(FETCH)begin
+						leNaProximaSubida <=1'b1;
+					end else begin
+						leNaProximaSubida <=1'b0;
+					end
+			end	
+		end 
+	end/*always_ff*/
+		
+	
+	always_comb  begin 
+		if(reset)begin
+			saidaMBR[0][7:0] = 8'bZZZZZZZZ;
+			saidaMBR[1][7:0] = 8'bZZZZZZZZ;
+			saidaMBR[2][7:0] = 8'bZZZZZZZZ;
+			saidaMBR[3][7:0] = 8'bZZZZZZZZ;	
+		end else begin/*reset*/
+			if(enaToA) begin
+				saidaMBR[0][7:0] = MBR_Reg;
+				if(toSigned)begin/*Extensao do sinal*/
+					if(MBR_Reg[7])begin 
+						saidaMBR[1][7:0] = 8'b11111111; 
+						saidaMBR[2][7:0] = 8'b11111111;
+						saidaMBR[3][7:0] = 8'b11111111;
+					end else begin
+						saidaMBR[1][7:0] = 8'b00000000; 
+						saidaMBR[2][7:0] = 8'b00000000;
+						saidaMBR[3][7:0] = 8'b00000000;
+					end
+					
+				end else begin/*Sem extensao*/
+					saidaMBR[1][7:0] = 8'b00000000; 
+					saidaMBR[2][7:0] = 8'b00000000;
+					saidaMBR[3][7:0] = 8'b00000000;
+				end/*toSigned*/
+			end else begin
+					saidaMBR[0][7:0] = 8'bZZZZZZZZ;
+					saidaMBR[1][7:0] = 8'bZZZZZZZZ; 
+					saidaMBR[2][7:0] = 8'bZZZZZZZZ;
+					saidaMBR[3][7:0] = 8'bZZZZZZZZ;
+			end/*enaToA*/ 
+		end/*reset*/	
+		MBR2MPC = MBR_Reg;	
+	end/*always_ff*/					
+endmodule
