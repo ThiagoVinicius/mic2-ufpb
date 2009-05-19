@@ -1,0 +1,46 @@
+module PC(
+		input logic clk,
+		input logic reset,
+		
+		input logic enaOutB,/*Habilita guarda para o barramento B*/
+		input logic enaIn,  /*Habilita inputC para o guarda*/			
+		
+		input logic signed[31:0] inputC,
+		
+		output logic signed[31:0] B,
+		output logic unsigned[31:0] outMemPrinc/*Saida da memoria principal*/
+);
+
+
+	logic signed [31:0]guardA;
+
+	always_ff @( posedge clk)begin
+			if(reset) begin 
+				guardA <= 32'b00000000000000000000000000000000;
+			end else begin
+				if(enaIn) begin				
+					guardA <= inputC;	
+				end/*enableIn*/
+			end	
+	end
+	
+	// This construct should be used to infer purely combinational logic.
+	always_comb
+	begin
+	// Statements
+			if(reset) begin 
+				B 			= 32'bZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ; 
+				outMemPrinc = 32'bZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ;		
+			end
+			
+			if(enaOutB)begin
+					B = guardA;	
+				end else begin
+					B = 32'bZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ;
+			end
+	
+			outMemPrinc = guardA;	
+	
+	end
+	
+endmodule 
