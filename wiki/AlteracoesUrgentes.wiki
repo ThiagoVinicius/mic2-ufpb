@@ -3,6 +3,8 @@
 
 = Introduction =
 
+Como a maioria de vocês sabe, o código gerado pelo "compilador/assembler" atualmente não é compatível com a palavra da ROM da unidade de controle, e que isso precisa ser corrigido o mais rápido possível.
+
 Numa primeira olhada no código, alterar o "compilador/assembler" para a mic-2 não será trivial para outra pessoa que não o próprio Duílio.
 
 Se alguém quiser topar essa aventura, boa sorte:
