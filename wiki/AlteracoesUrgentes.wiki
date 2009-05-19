@@ -1,0 +1,47 @@
+#summary Coisas urgentes a serem feitas
+#labels urgent
+
+= Introduction =
+
+Numa primeira olhada no código, alterar o "compilador/assembler" para a mic-2 não será trivial para outra pessoa que não o próprio Duílio.
+
+Se alguém quiser topar essa aventura, boa sorte:
+(eu acho que você pode começar olhando aqui: br.ufpb.di.mic2.AddDialog, linha 811)
+
+However, eu acho que é mais fácil refazer o assembler.
+Isto é baseado nestes argumentos:
+
+  * Código da arquitetura é bastante simples:
+    * Baseado em comandos, principalmente.
+    * Valores gerados por expressões não precisam ser propagados (a saida é sempre no mesmo lugar: o barramento C).
+
+
+Opiniões são bem vindas. Podem editar aqui mesmo.
+
+O que se segue são as tasks mais urgentes (que eu pude identificar). Qualquer um que se propuzer a uma das tasks, favor colocar o nome ao lado da task.
+
+
+= Details =
+
+  # *Modelagem de parte da estrutura interna do processador:* (nome do taskholder/prazo)
+    * Uma classe que represente todos os sinais de controle na MIC-2.
+      * Sinais da ULA, leitura e escrita nos registradores, sinal de leitura (e outros, que eu nao me lembro agora).
+    * Metodos para set e get de todos os sinais.
+      * A classe nao deve permitir situacoes de conflito. Exemplos:
+        * *Lancar exceção* nesses casos é sempre bom
+        * Leitura de dois registradores no mesmo barramento, etc.
+    * Um esqueleto da classe esta no pacote *br.ufpb.di.mic2.signal*, a classe se chama Processor
+    * Isto nao é obrigatório, mas aconselho criar as classes necessarias apenas dentro deste pacote
+
+  # *Modelagem das palavras reservadas da linguagem:* (nome do taskholder/prazo)
+    * Tarefa muito simples, apenas preencher arrays.
+    * Editar a classe *WordSet*, no pacote *br.ufpb.di.mic2.microassembler.words*.
+      * Nomes de registradores vão no array "REGISTER" e pertencem a classe RegisterIdentifier
+      * Comandos vão no array COMMAND e pertencem a classe ReservedWord
+      * Operadores vão no array OPERATOR.
+        * Operadores representados por palavras (ex: or, and, not, etc.) são instâncias da classe ReservedWord
+        * Operadores representados por simbolos (ex: +, -, =, etc.) são instâncias da classe SpecialOperator
+
+  # *Ajustes na interface grafica* (nome do taskholder/prazo)
+  * A interface gráfica está pouco flexível, devido ao uso de AbsoluteLayout.
+    * BorderLayout ou outro *auto-ajustavel em tempo de execução* é preferido.
