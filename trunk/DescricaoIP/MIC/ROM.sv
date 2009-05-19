@@ -37,7 +37,7 @@ module ROM(
 	output logic enaOPC,
 	output logic enaH,
 	output logic [2:0]MEM,
-	output logic [38:0] q1	
+	output logic [38:0] q1	//so para testes
 );
 
 	wire [38:0] sub_wire0;
@@ -83,6 +83,7 @@ module ROM(
 		altsyncram_component.width_byteena_a = 1;
 
 
+//essa parte sera apagada
 	logic [511:0][38:0] MICROPROGRAMA = {
 	/*	511*/	39'b000000000000000000000000000000000000000,
 	/*	510*/	39'b000000000000000000000000000000000000000,
@@ -634,7 +635,8 @@ module ROM(
 	//	39'b000000010000000000000001111000000000000,/*00001		MBR1  	000000010 000 000000 00 0001 111 000000000 000   NOP*/
 	//    39'b000000001000110101000001110001000000001 /*00000	MAIN  	000000001 000 110101 00 0001 110 001000000 001   PC =PC+1;FETCH*/
 	};
-																			
+
+//essa parte sera apagada															
 										
 logic [38:0] NEXT_INSTRUCT =39'b0 ;// = 39'b000000000000000000000000000000000000000;
 
@@ -676,7 +678,7 @@ begin
 				enaOPC      = NEXT_INSTRUCT[4];
 				enaH      	= NEXT_INSTRUCT[3];			
 				MEM 		= NEXT_INSTRUCT[2:0];
-				q1          = NEXT_INSTRUCT[38:0];
+				q1          = NEXT_INSTRUCT[38:0];  //so para testes
 	
 end
 
