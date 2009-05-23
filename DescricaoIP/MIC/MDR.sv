@@ -34,7 +34,7 @@ module MDR(
 
 	logic signed [31:0]guarda;
 	logic entradaNaProxima = 1'b0;/*Quando alto indica que na proxima borda de subida do clock havera um dado valido para ser 
-	                                lido chegando da memoria*/
+	                                lido chegando da memoria Obs: vai ser retirado*/
 
     /*Parte sequencial do modulo*/
 	always_ff @( posedge clk)begin
@@ -46,7 +46,7 @@ module MDR(
 					guarda <= inputC;	
 				end/*enableIn*/
 				
-				if(entradaNaProxima)begin
+				if(entradaNaProxima)begin //isso vai ser retirado
 					guarda <= inMemPrinc;
 					if(READ) begin
 						entradaNaProxima <= 1'b1;
