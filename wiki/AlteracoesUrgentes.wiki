@@ -46,4 +46,4 @@ O que se segue são as tasks mais urgentes (que eu pude identificar). Qualquer u
 
   # *Ajustes na interface grafica* (nome do taskholder/prazo)
   * A interface gráfica está pouco flexível, devido ao uso de AbsoluteLayout.
-    * BorderLayout ou outro *auto-ajustavel em tempo de execução* é preferido.
+    * GroupLayout ou outro *auto-ajustavel em tempo de execução* é preferido.
