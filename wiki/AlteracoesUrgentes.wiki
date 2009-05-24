@@ -25,7 +25,7 @@ O que se segue são as tasks mais urgentes (que eu pude identificar). Qualquer u
 
 = Details =
 
-  # *Modelagem de parte da estrutura interna do processador:* (nome do taskholder/prazo)
+  # *Modelagem de parte da estrutura interna do processador:* (Thiago /24/05/2009 à noite)
     * Uma classe que represente todos os sinais de controle na MIC-2.
       * Sinais da ULA, leitura e escrita nos registradores, sinal de leitura (e outros, que eu nao me lembro agora).
     * Metodos para set e get de todos os sinais.
