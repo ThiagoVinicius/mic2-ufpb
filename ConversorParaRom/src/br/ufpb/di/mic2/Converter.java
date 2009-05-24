@@ -8,6 +8,7 @@ package br.ufpb.di.mic2;
 /**
  *
  * @author Duilio
+ * @author Thiago
  */
 public class Converter {
 
