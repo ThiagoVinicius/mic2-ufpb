@@ -44,6 +44,6 @@ O que se segue são as tasks mais urgentes (que eu pude identificar). Qualquer u
         * Operadores representados por palavras (ex: or, and, not, etc.) são instâncias da classe ReservedWord
         * Operadores representados por simbolos (ex: +, -, =, etc.) são instâncias da classe SpecialOperator
 
-  # *Ajustes na interface grafica* (nome do taskholder/prazo)
+  # *Ajustes na interface grafica* (Gutenberg e Diénert - 01/06)
   * A interface gráfica está pouco flexível, devido ao uso de AbsoluteLayout.
     * GroupLayout ou outro *auto-ajustavel em tempo de execução* é preferido.
