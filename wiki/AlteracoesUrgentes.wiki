@@ -26,14 +26,15 @@ O que se segue são as tasks mais urgentes (que eu pude identificar). Qualquer u
 = Details =
 
   # *Modelagem de parte da estrutura interna do processador:* (Thiago 25/05/2009)
-    * Uma classe que represente todos os sinais de controle na MIC-2.
-      * Sinais da ULA, leitura e escrita nos registradores, sinal de leitura (e outros, que eu nao me lembro agora).
-    * Metodos para set e get de todos os sinais.
+    * Funcionalidades implementadas marcadas com ~~tachado~~
+    * ~~Uma classe que represente todos os sinais de controle na MIC-2.~~
+      * ~~ Sinais da ULA, leitura e escrita nos registradores, sinal de leitura (e outros, que eu nao me lembro agora). ~~
+    * ~~Metodos para set~~ e get de todos os sinais.
       * A classe nao deve permitir situacoes de conflito. Exemplos:
         * *Lancar exceção* nesses casos é sempre bom
         * Leitura de dois registradores no mesmo barramento, etc.
-    * Um esqueleto da classe esta no pacote *br.ufpb.di.mic2.signal*, a classe se chama Processor
-    * Isto nao é obrigatório, mas aconselho criar as classes necessarias apenas dentro deste pacote
+    * ~~Um esqueleto da classe esta no pacote *br.ufpb.di.mic2.signal*, a classe se chama Processor~~
+    * ~~Isto nao é obrigatório, mas aconselho criar as classes necessarias apenas dentro deste pacote~~
 
   # *Modelagem das palavras reservadas da linguagem:* (nome do taskholder/prazo)
     * Tarefa muito simples, apenas preencher arrays.
