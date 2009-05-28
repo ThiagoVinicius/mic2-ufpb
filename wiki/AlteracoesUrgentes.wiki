@@ -48,3 +48,5 @@ O que se segue são as tasks mais urgentes (que eu pude identificar). Qualquer u
   # *Ajustes na interface grafica* (Gutenberg e Diénert - 01/06)
   * A interface gráfica está pouco flexível, devido ao uso de AbsoluteLayout.
     * GroupLayout ou outro *auto-ajustavel em tempo de execução* é preferido.
+
+  UPDATE (27/05): pela maneira como foi feito o código, percebemos que não é possível a mudança para outro layout com facilidade. Por conta disso, vamos fazer o possível para modificar a interface (mantendo o AbsoluteLayout) de maneira que ela passe a ser mostrada corretamente.
