@@ -6,7 +6,7 @@
 
 = Details =
 
-`<Address1>` -> digit <Address2>`
+`<Address1> -> digit <Address2>`
 
 `<Address2> -> x <Digit>` 
 
