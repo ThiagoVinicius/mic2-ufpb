@@ -1,0 +1,37 @@
+#summary Decisões sobre a gramática da linguagem de microcódigo mic-2.
+
+= Introduction =
+
+Esta é a gramática da linguagem. Esta gramática é uma simplificação da gramática original por Jailton e Joedson, que pode ser encontrada na seção de downloads.
+
+
+Esta gramática é definitiva, podendo ser alterada se contiver erros.
+
+Peço encarecidamente que quem puder dar uma olhada e verificar, que o faça, assim evitaremos erros grosseiros ou erros errados mesmo.
+
+
+= Details =
+{{{
+A gramatica atual é:
+
+Símbolos de alta precedência (separados por espacos): + - ; << =
+
+
+[name] := "([a-zA-Z])+(\\w)*" #Java regex
+
+MICROINSTRUCTION_CODE -> COMMAND ; | COMMAND | MICROINSTRUCTION_CODE ; COMMAND #livre de contexto, entretanto, pode ser resolvida com um simples split seguido de um for
+
+COMMAND -> λ | ASSIGNMENT | ULA_SHIFT | MEMORY | JUMP | CONDITIONAL
+
+ASSIGNMENT -> [name] = ASSIGNMENT | [name] = ULA_SHIFT
+
+ULA_SHIFT -> ULA | ULA << 8 #unica derivação à esquerda.
+
+ULA -> [name] | not [name] | neg [name] | [name] + [name] + 1 | [name] + [name] | [name] + 1 | [name] - 1 | [name] - [name] | [name] and [name] | [name] or [name] | 0 | 1 | -1
+
+MEMORY -> rd | wr | fetch
+
+JUMP -> goto [name] | jmpc
+
+CONDITIONAL -> if n goto [name] else goto [name] | if z goto [name] else goto [name]
+}}}
