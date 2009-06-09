@@ -1,0 +1,38 @@
+#summary Sobre a filosofia deste projeto
+
+= Introduction =
+
+Pessoal, percebi que talvez eu não tenha sido claro o suficiente nas minhas declarações em sala de aula. Abaixo, segue uma retratação:
+
+
+= Details =
+
+
+  * O único motivo para estar-mos todos refazendo um programa que já está implementado é que: o código de legado possui muito difícil de se manter. NÃO ESTAMOS FAZENDO ISSO para:
+    * Mostrar que somos melhores;
+    * Parecer engraçado;
+    * Mostrar ao professor que merecemos notas melhores, pois FIZEMOS TUDO DO ZERO;
+    * Entre outros.
+
+  * Nossos objetivos são:
+    # Criar código o mais extensível possível. << se falhar-mos neste ponto, falhamos na nossa missão de samurais e somos passíveis de "kill ourselves in shame".
+    # Nunca esquecer do ponto 1.
+    # O ponto número 1 é o mais importante de todos.
+    # Fui claro quanto ao número 1?
+    # Mudar alguns aspectos do programa para melhor.
+
+  * É da maior importância que:
+    * O código (O CÓDIGO!!) seja o mais fácil possível de se entender. << falhar aqui equipara-se a falhar no ponto 1, na lista acima.
+    * Isto significa que, não importa o quão revolucionária é uma nova funcionalidade. Se não foi descoberto um jeito óbvio, simples e claro de se implementar, esta funcionalidade deve ser deixada de lado pelo tempo que for necessário até que seja criada uma solução que possa ser escrita em código, ao menos, de forma clara.
+    * Quando for implementar uma funcionalidade, pense antes de agir. Se souber como implementar de forma clara, não o faça.
+    * Os dois pontos acima são importantes, mas o julgamento final é individual sobre o seu próprio código (lembrem-se, outras pessoas vão usar este código no futuro).
+    
+
+No mais, assistir este vídeo é, digamos, de grande importância:
+
+http://www.akitaonrails.com/2008/6/14/machucando-c-digo-por-divers-o-e-lucro 
+
+http://www.vimeo.com/1171415?pg=embed&sec=1171415
+
+
+Happy programming!!
