@@ -54,7 +54,7 @@ public class MIFFileExporter {
             wr.write(String.format("%03X", cur.address));
             wr.write(" : ");
             wr.write(cur.machineCode.code);
-            wr.write(" -- ");
+            wr.write("; -- ");
             wr.write(cur.highLevelCode.toString());
             wr.write("\n");
 
