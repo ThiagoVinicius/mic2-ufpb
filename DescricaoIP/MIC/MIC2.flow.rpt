@@ -1,5 +1,5 @@
 Flow report for MIC2
-Tue May 19 12:07:09 2009
+Wed Jul 08 11:44:12 2009
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
 
 
@@ -37,16 +37,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Flow Summary                                                            ;
 +-------------------------------+-----------------------------------------+
-; Flow Status                   ; Successful - Tue May 19 12:07:09 2009   ;
+; Flow Status                   ; Successful - Wed Jul 08 11:44:12 2009   ;
 ; Quartus II Version            ; 8.0 Build 215 05/29/2008 SJ Web Edition ;
 ; Revision Name                 ; MIC2                                    ;
 ; Top-level Entity Name         ; MIC2                                    ;
 ; Family                        ; Stratix II                              ;
 ; Met timing requirements       ; Yes                                     ;
 ; Logic utilization             ; 16 %                                    ;
-;     Combinational ALUTs       ; 1,174 / 12,480 ( 9 % )                  ;
-;     Dedicated logic registers ; 1,462 / 12,480 ( 12 % )                 ;
-; Total registers               ; 1462                                    ;
+;     Combinational ALUTs       ; 1,172 / 12,480 ( 9 % )                  ;
+;     Dedicated logic registers ; 1,465 / 12,480 ( 12 % )                 ;
+; Total registers               ; 1465                                    ;
 ; Total pins                    ; 275 / 343 ( 80 % )                      ;
 ; Total virtual pins            ; 0                                       ;
 ; Total block memory bits       ; 19,968 / 419,328 ( 5 % )                ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2009 12:05:41 ;
+; Start date & time ; 07/08/2009 11:42:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIC2                ;
 +-------------------+---------------------+
@@ -74,11 +74,15 @@ applicable agreement for further details.
 +------------------------------------+------------------------------+---------------+-------------+------------+
 ; Assignment Name                    ; Value                        ; Default Value ; Entity Name ; Section Id ;
 +------------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID              ; 134117486958.124274554103320 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID              ; 126468022612.124706416802916 ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                       ; LPM_ROM                      ; --            ; --          ; --         ;
+; IP_TOOL_NAME                       ; LPM_ROM                      ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                    ; 8.0                          ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                    ; 8.0                          ; --            ; --          ; --         ;
 ; MISC_FILE                          ; lpm_rom0.bsf                 ; --            ; --          ; --         ;
 ; MISC_FILE                          ; lpm_rom0_bb.v                ; --            ; --          ; --         ;
+; MISC_FILE                          ; lpm_rom1.bsf                 ; --            ; --          ; --         ;
+; MISC_FILE                          ; lpm_rom1_bb.v                ; --            ; --          ; --         ;
 ; PARTITION_COLOR                    ; 14622752                     ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                       ; --            ; --          ; Top        ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                          ; --            ; --          ; eda_palace ;
@@ -90,11 +94,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:34     ; 1.0                     ; 200 MB              ; 00:00:31                           ;
-; Fitter                  ; 00:00:36     ; 1.0                     ; 220 MB              ; 00:00:31                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 156 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 159 MB              ; 00:00:02                           ;
-; Total                   ; 00:01:13     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis    ; 00:00:30     ; 1.0                     ; 206 MB              ; 00:00:29                           ;
+; Fitter                  ; 00:00:32     ; 1.0                     ; 237 MB              ; 00:00:28                           ;
+; Assembler               ; 00:00:05     ; 1.0                     ; 220 MB              ; 00:00:05                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 168 MB              ; 00:00:02                           ;
+; Total                   ; 00:01:09     ; --                      ; --                  ; 00:01:04                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Assembler report for MIC2
-Tue May 19 12:07:04 2009
+Wed Jul 08 11:44:08 2009
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
 
 
@@ -9,7 +9,10 @@ Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
   1. Legal Notice
   2. Assembler Summary
   3. Assembler Settings
-  4. Assembler Messages
+  4. Assembler Generated Files
+  5. Assembler Device Options: D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.sof
+  6. Assembler Device Options: D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.pof
+  7. Assembler Messages
 
 
 
@@ -35,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue May 19 12:07:04 2009 ;
+; Assembler Status      ; Successful - Wed Jul 08 11:44:08 2009 ;
 ; Revision Name         ; MIC2                                  ;
 ; Top-level Entity Name ; MIC2                                  ;
 ; Family                ; Stratix II                            ;
@@ -75,19 +78,53 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
++-------------------------------------------------------------+
+; Assembler Generated Files                                   ;
++-------------------------------------------------------------+
+; File Name                                                   ;
++-------------------------------------------------------------+
+; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.sof ;
+; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.pof ;
++-------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.sof ;
++----------------+----------------------------------------------------------------------+
+; Option         ; Setting                                                              ;
++----------------+----------------------------------------------------------------------+
+; Device         ; EP2S15F484C3                                                         ;
+; JTAG usercode  ; 0xFFFFFFFF                                                           ;
+; Checksum       ; 0x004B260C                                                           ;
++----------------+----------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.pof ;
++--------------------+------------------------------------------------------------------+
+; Option             ; Setting                                                          ;
++--------------------+------------------------------------------------------------------+
+; Device             ; EPC16                                                            ;
+; JTAG usercode      ; 0xFFFFFFFF                                                       ;
+; Checksum           ; 0x1E84C37D                                                       ;
+; Compression Ratio  ; 2                                                                ;
++--------------------+------------------------------------------------------------------+
+
+
 +--------------------+
 ; Assembler Messages ;
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 8.0 Build 215 05/29/2008 SJ Web Edition
-    Info: Processing started: Tue May 19 12:07:04 2009
+    Info: Processing started: Wed Jul 08 11:44:03 2009
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MIC2 -c MIC2
-Warning: Can't generate programming files because you are currently using the Quartus II software in Evaluation Mode
-Info: Quartus II Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 168 megabytes
-    Info: Processing ended: Tue May 19 12:07:05 2009
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Writing out detailed assembly data for power analysis
+Info: Assembler is generating device programming files
+Info: Quartus II Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 220 megabytes
+    Info: Processing ended: Wed Jul 08 11:44:08 2009
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

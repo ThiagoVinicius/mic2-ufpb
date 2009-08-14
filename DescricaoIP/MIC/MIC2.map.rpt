@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIC2
-Tue May 19 12:06:18 2009
+Wed Jul 08 11:43:20 2009
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
 
 
@@ -18,7 +18,7 @@ Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
  10. General Register Statistics
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for ROM:inst3|altsyncram:altsyncram_component|altsyncram_th91:auto_generated
+ 13. Source assignments for ROM:inst3|altsyncram:altsyncram_component|altsyncram_fg91:auto_generated
  14. Parameter Settings for User Entity Instance: ROM:inst3|altsyncram:altsyncram_component
  15. Analysis & Synthesis Messages
 
@@ -46,7 +46,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                            ;
 +-------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue May 19 12:06:18 2009   ;
+; Analysis & Synthesis Status   ; Successful - Wed Jul 08 11:43:20 2009   ;
 ; Quartus II Version            ; 8.0 Build 215 05/29/2008 SJ Web Edition ;
 ; Revision Name                 ; MIC2                                    ;
 ; Top-level Entity Name         ; MIC2                                    ;
@@ -139,39 +139,39 @@ applicable agreement for further details.
 +--------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
-; ALU.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/ALU.sv                     ;
-; CONTROLEMIC.sv                   ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/CONTROLEMIC.sv             ;
-; DATA_PATH.bdf                    ; yes             ; User Block Diagram/Schematic File  ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/DATA_PATH.bdf              ;
-; DecodificadorA.sv                ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/DecodificadorA.sv          ;
-; DecodificadorB.sv                ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/DecodificadorB.sv          ;
-; Deslocador.sv                    ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/Deslocador.sv              ;
-; FETCH_MEM.sv                     ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/FETCH_MEM.sv               ;
-; MAR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/MAR.sv                     ;
-; MBR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/MBR.sv                     ;
-; MDR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/MDR.sv                     ;
-; PC.sv                            ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/PC.sv                      ;
-; RAM.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/RAM.sv                     ;
-; Registrador.sv                   ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/Registrador.sv             ;
-; ROM.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/ROM.sv                     ;
-; SelectMem.sv                     ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/SelectMem.sv               ;
-; MIC2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/MIC2.bdf                   ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altsyncram.tdf        ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/stratix_ram_block.inc ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.inc           ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_decode.inc        ;
-; aglobal80.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/aglobal80.inc         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/a_rdenreg.inc         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altrom.inc            ;
-; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altram.inc            ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altdpram.inc          ;
-; altqpram.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altqpram.inc          ;
-; db/altsyncram_th91.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Pessoal/ufpb/P5/Arquitetura/MIC2/MIC/db/altsyncram_th91.tdf     ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+
+; ALU.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/ALU.sv                 ;
+; CONTROLEMIC.sv                   ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/CONTROLEMIC.sv         ;
+; DATA_PATH.bdf                    ; yes             ; User Block Diagram/Schematic File  ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/DATA_PATH.bdf          ;
+; DecodificadorA.sv                ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/DecodificadorA.sv      ;
+; DecodificadorB.sv                ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/DecodificadorB.sv      ;
+; Deslocador.sv                    ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/Deslocador.sv          ;
+; FETCH_MEM.sv                     ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/FETCH_MEM.sv           ;
+; MAR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MAR.sv                 ;
+; MBR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MBR.sv                 ;
+; MDR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MDR.sv                 ;
+; PC.sv                            ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/PC.sv                  ;
+; RAM.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/RAM.sv                 ;
+; Registrador.sv                   ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/Registrador.sv         ;
+; ROM.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/ROM.sv                 ;
+; SelectMem.sv                     ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/SelectMem.sv           ;
+; MIC2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.bdf               ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altsyncram.tdf               ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/stratix_ram_block.inc        ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.inc                  ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_decode.inc               ;
+; aglobal80.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/aglobal80.inc                ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/a_rdenreg.inc                ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altrom.inc                   ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altram.inc                   ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altdpram.inc                 ;
+; altqpram.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altqpram.inc                 ;
+; db/altsyncram_fg91.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/db/altsyncram_fg91.tdf ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -240,18 +240,18 @@ applicable agreement for further details.
 ;    |RAM:inst5|                            ; 407 (407)         ; 1089 (1089)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|RAM:inst5                                                                ; work         ;
 ;    |ROM:inst3|                            ; 1 (1)             ; 39 (39)      ; 19968             ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|ROM:inst3                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 19968             ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|ROM:inst3|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_th91:auto_generated| ; 0 (0)             ; 0 (0)        ; 19968             ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|ROM:inst3|altsyncram:altsyncram_component|altsyncram_th91:auto_generated ; work         ;
+;          |altsyncram_fg91:auto_generated| ; 0 (0)             ; 0 (0)        ; 19968             ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|ROM:inst3|altsyncram:altsyncram_component|altsyncram_fg91:auto_generated ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                       ;
-+-------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------+
-; Name                                                                                ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF            ;
-+-------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------+
-; ROM:inst3|altsyncram:altsyncram_component|altsyncram_th91:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 39           ; --           ; --           ; 19968 ; instrucoes.mif ;
-+-------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                         ;
++-------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; Name                                                                                ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                              ;
++-------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; ROM:inst3|altsyncram:altsyncram_component|altsyncram_fg91:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 39           ; --           ; --           ; 19968 ; ../../../MIC2/MIC/instrucoes.mif ;
++-------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+----------------------------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -369,7 +369,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------+
-; Source assignments for ROM:inst3|altsyncram:altsyncram_component|altsyncram_th91:auto_generated ;
+; Source assignments for ROM:inst3|altsyncram:altsyncram_component|altsyncram_fg91:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------+
 ; Assignment                      ; Value              ; From ; To                                ;
 +---------------------------------+--------------------+------+-----------------------------------+
@@ -379,60 +379,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +----------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ROM:inst3|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+----------------------------+
-; Parameter Name                     ; Value                ; Type                       ;
-+------------------------------------+----------------------+----------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                    ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                 ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY               ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE               ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE             ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                    ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                    ;
-; WIDTH_A                            ; 39                   ; Signed Integer             ;
-; WIDTHAD_A                          ; 9                    ; Signed Integer             ;
-; NUMWORDS_A                         ; 512                  ; Signed Integer             ;
-; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                    ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                    ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                    ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                    ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                    ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                    ;
-; WIDTH_B                            ; 1                    ; Untyped                    ;
-; WIDTHAD_B                          ; 1                    ; Untyped                    ;
-; NUMWORDS_B                         ; 1                    ; Untyped                    ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                    ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                    ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                    ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                    ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                    ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                    ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                    ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                    ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                    ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                    ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                    ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer             ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                    ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                    ;
-; BYTE_SIZE                          ; 8                    ; Untyped                    ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                    ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                    ;
-; INIT_FILE                          ; instrucoes.mif       ; Untyped                    ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                    ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                    ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                    ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                    ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                    ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                    ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                    ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                    ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                    ;
-; DEVICE_FAMILY                      ; Stratix II           ; Untyped                    ;
-; CBXI_PARAMETER                     ; altsyncram_th91      ; Untyped                    ;
-+------------------------------------+----------------------+----------------------------+
++------------------------------------+----------------------------------+----------------+
+; Parameter Name                     ; Value                            ; Type           ;
++------------------------------------+----------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                               ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                              ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                               ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                              ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                ; Untyped        ;
+; OPERATION_MODE                     ; ROM                              ; Untyped        ;
+; WIDTH_A                            ; 39                               ; Signed Integer ;
+; WIDTHAD_A                          ; 9                                ; Signed Integer ;
+; NUMWORDS_A                         ; 512                              ; Signed Integer ;
+; OUTDATA_REG_A                      ; UNREGISTERED                     ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                             ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                             ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                             ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                             ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                             ; Untyped        ;
+; WIDTH_B                            ; 1                                ; Untyped        ;
+; WIDTHAD_B                          ; 1                                ; Untyped        ;
+; NUMWORDS_B                         ; 1                                ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                           ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                           ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                           ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                           ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                     ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                           ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                             ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                             ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                             ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                             ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                             ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                             ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                ; Signed Integer ;
+; WIDTH_BYTEENA_B                    ; 1                                ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                             ; Untyped        ;
+; BYTE_SIZE                          ; 8                                ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                        ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ             ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ             ; Untyped        ;
+; INIT_FILE                          ; ../../../MIC2/MIC/instrucoes.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                           ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                           ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                           ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                  ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                  ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                            ; Untyped        ;
+; DEVICE_FAMILY                      ; Stratix II                       ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_fg91                  ; Untyped        ;
++------------------------------------+----------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -442,7 +442,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.0 Build 215 05/29/2008 SJ Web Edition
-    Info: Processing started: Tue May 19 12:05:40 2009
+    Info: Processing started: Wed Jul 08 11:42:47 2009
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIC2 -c MIC2
 Info: Found 1 design units, including 1 entities, in source file ALU.sv
     Info: Found entity 1: ALU
@@ -472,7 +472,6 @@ Info: Found 1 design units, including 1 entities, in source file RAM.sv
     Info: Found entity 1: RAM
 Info: Found 1 design units, including 1 entities, in source file Registrador.sv
     Info: Found entity 1: Registrador
-Warning (10090): Verilog HDL syntax warning at ROM.sv(455): extra block comment delimiter characters /* within block comment
 Info: Found 1 design units, including 1 entities, in source file ROM.sv
     Info: Found entity 1: ROM
 Info: Found 1 design units, including 1 entities, in source file SelectMem.sv
@@ -481,30 +480,30 @@ Info: Found 1 design units, including 1 entities, in source file MIC2.bdf
     Info: Found entity 1: MIC2
 Info: Found 1 design units, including 1 entities, in source file lpm_rom0.v
     Info: Found entity 1: lpm_rom0
+Info: Found 1 design units, including 1 entities, in source file lpm_rom1.v
+    Info: Found entity 1: lpm_rom1
 Info: Elaborating entity "MIC2" for the top level hierarchy
-Warning: Block or symbol "ROM" of instance "inst3" overlaps another block or symbol
 Info: Elaborating entity "SelectMem" for hierarchy "SelectMem:inst"
 Info: Elaborating entity "ROM" for hierarchy "ROM:inst3"
-Warning (10036): Verilog HDL or VHDL warning at ROM.sv(637): object "MICROPROGRAMA" assigned a value but never read
 Info: Elaborating entity "altsyncram" for hierarchy "ROM:inst3|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "ROM:inst3|altsyncram:altsyncram_component"
 Info: Instantiated megafunction "ROM:inst3|altsyncram:altsyncram_component" with the following parameter:
     Info: Parameter "clock_enable_input_a" = "BYPASS"
     Info: Parameter "clock_enable_output_a" = "BYPASS"
-    Info: Parameter "init_file" = "instrucoes.mif"
+    Info: Parameter "init_file" = "../../../MIC2/MIC/instrucoes.mif"
     Info: Parameter "intended_device_family" = "Stratix II"
-    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO, INSTANCE_NAME=NONE"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info: Parameter "lpm_type" = "altsyncram"
     Info: Parameter "numwords_a" = "512"
     Info: Parameter "operation_mode" = "ROM"
     Info: Parameter "outdata_aclr_a" = "NONE"
-    Info: Parameter "outdata_reg_a" = "CLOCK0"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
     Info: Parameter "widthad_a" = "9"
     Info: Parameter "width_a" = "39"
     Info: Parameter "width_byteena_a" = "1"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_th91.tdf
-    Info: Found entity 1: altsyncram_th91
-Info: Elaborating entity "altsyncram_th91" for hierarchy "ROM:inst3|altsyncram:altsyncram_component|altsyncram_th91:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_fg91.tdf
+    Info: Found entity 1: altsyncram_fg91
+Info: Elaborating entity "altsyncram_fg91" for hierarchy "ROM:inst3|altsyncram:altsyncram_component|altsyncram_fg91:auto_generated"
 Info: Elaborating entity "CONTROLEMIC" for hierarchy "CONTROLEMIC:CONTROLMIC"
 Info: Elaborating entity "DATA_PATH" for hierarchy "DATA_PATH:DP"
 Info: Elaborating entity "ALU" for hierarchy "DATA_PATH:DP|ALU:ULA"
@@ -667,10 +666,10 @@ Info: Implemented 2786 device resources after synthesis - the final resource cou
     Info: Implemented 272 output pins
     Info: Implemented 2472 logic cells
     Info: Implemented 39 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 114 warnings
-    Info: Peak virtual memory: 200 megabytes
-    Info: Processing ended: Tue May 19 12:06:18 2009
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:33
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 111 warnings
+    Info: Peak virtual memory: 206 megabytes
+    Info: Processing ended: Wed Jul 08 11:43:20 2009
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:31
 
 
