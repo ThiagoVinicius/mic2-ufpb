@@ -13,7 +13,7 @@
   **********/ 
 module ROM(
 //	input  logic unsigned [38:0]  MICRO,
-	input [8:0] address,
+	input [8:0] MPC,
 	input clk,
 	input logic reset,
 	input logic READ,/*Nesse caso vai estar sempre ativo*/	
@@ -37,7 +37,7 @@ module ROM(
 	output logic enaOPC,
 	output logic enaH,
 	output logic [2:0]MEM,
-	output logic [38:0] q1	
+	output logic [38:0] q1	//so para testes
 );
 
 	wire [38:0] sub_wire0;
@@ -45,7 +45,7 @@ module ROM(
 
 	altsyncram	altsyncram_component (
 				.clock0 (clk),
-				.address_a (address),
+				.address_a (MPC),
 				.q_a (sub_wire0),
 				.aclr0 (1'b0),
 				.aclr1 (1'b0),
@@ -70,18 +70,17 @@ module ROM(
 	defparam
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-		altsyncram_component.init_file = "instrucoes.mif",
+		altsyncram_component.init_file = "../../../MIC2/MIC/instrucoes.mif",
 		altsyncram_component.intended_device_family = "Stratix II",
-		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO, INSTANCE_NAME=NONE",
+		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",
 		altsyncram_component.numwords_a = 512,
 		altsyncram_component.operation_mode = "ROM",
 		altsyncram_component.outdata_aclr_a = "NONE",
-		altsyncram_component.outdata_reg_a = "CLOCK0",
+		altsyncram_component.outdata_reg_a = "UNREGISTERED",
 		altsyncram_component.widthad_a = 9,
 		altsyncram_component.width_a = 39,
 		altsyncram_component.width_byteena_a = 1;
-
 
 //essa parte sera apagada
 	logic [511:0][38:0] MICROPROGRAMA = {
@@ -678,7 +677,7 @@ begin
 				enaOPC      = NEXT_INSTRUCT[4];
 				enaH      	= NEXT_INSTRUCT[3];			
 				MEM 		= NEXT_INSTRUCT[2:0];
-				q1          = NEXT_INSTRUCT[38:0];
+				q1          = NEXT_INSTRUCT[38:0];  //so para testes
 	
 end
 
