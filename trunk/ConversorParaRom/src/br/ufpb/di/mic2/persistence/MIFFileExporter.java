@@ -7,6 +7,7 @@ package br.ufpb.di.mic2.persistence;
 
 import br.ufpb.di.mic2.microassembler.CompiledMicrocode;
 import br.ufpb.di.mic2.microassembler.Microinstruction;
+import br.ufpb.di.newInterfaceMic2.Converter;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -30,7 +31,7 @@ public class MIFFileExporter {
         wr.write(Integer.toString(CompiledMicrocode.WORD_SIZE, 10));
         wr.write(";\n");
 
-        wr.write("ADDRESS_RADIX = HEX;\n");
+        wr.write("ADDRESS_RADIX = BIN;\n");
         wr.write("DATA_RADIX = BIN;\n");
         wr.write("\n");
         wr.write("CONTENT\n");
@@ -51,10 +52,14 @@ public class MIFFileExporter {
             String key = "word'"+i;
             Microinstruction cur = list.getMicroInstruction(key);
 
-            wr.write(String.format("%03X", cur.address));
+            wr.write(Converter.decToBin(i, CompiledMicrocode.ADDR_LENGHT));
             wr.write(" : ");
             wr.write(cur.machineCode.code);
-            wr.write("; -- ");
+            wr.write("; -- (");
+            wr.write(cur.name);
+            wr.write(" at ");
+            wr.write(String.format("0x%03X", cur.address));
+            wr.write("): ");
             wr.write(cur.highLevelCode.toString());
             wr.write("\n");
 
