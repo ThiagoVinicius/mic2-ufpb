@@ -170,17 +170,17 @@ word'82 is microinstruction inst_82
 
 word'83 is microinstruction inst_83 
 
-word'84 is microinstruction inst_84 
+word'84 is microinstruction lnext1 PC = PC + 1; FETCH; goto lnext2
 
-word'85 is microinstruction inst_85 
+word'85 is microinstruction lnext2 goto lnext3
 
-word'86 is microinstruction inst_86 
+word'86 is microinstruction lnext3 MAR = lv + mbru; rd; goto lnext4
 
-word'87 is microinstruction inst_87 
+word'87 is microinstruction lnext4 pc = pc +1; fetch; goto lnext5
 
-word'88 is microinstruction inst_88 
+word'88 is microinstruction lnext5 tos = mdr; goto lnext6
 
-word'89 is microinstruction inst_89 
+word'89 is microinstruction lnext6 mar = sp = sp + 1; wr; goto mbr2
 
 word'90 is microinstruction inst_90 
 
@@ -188,9 +188,9 @@ word'91 is microinstruction inst_91
 
 word'92 is microinstruction inst_92 
 
-word'93 is microinstruction inst_93 
+word'93 is microinstruction mbr2 jmpc
 
-word'94 is microinstruction inst_94 
+word'94 is microinstruction mbr22 
 
 word'95 is microinstruction inst_95 
 
