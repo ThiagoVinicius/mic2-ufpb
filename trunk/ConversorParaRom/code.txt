@@ -2,7 +2,7 @@ file_version is 1
 
 length is 512
 
-word'0 is microinstruction main pc = pc + 1; fetch 
+word'0 is microinstruction main pc = pc + 1; fetch; goto inst_mbr1
 
 word'1 is microinstruction nop1 goto main 
 
@@ -170,25 +170,25 @@ word'82 is microinstruction inst_82
 
 word'83 is microinstruction inst_83 
 
-word'84 is microinstruction lnext1 PC = PC + 1; FETCH; goto lnext2
+word'84 is microinstruction lnext1 PC = PC + 1; FETCH; goto lnext2 
 
-word'85 is microinstruction lnext2 goto lnext3
+word'85 is microinstruction lnext2 goto lnext3 
 
-word'86 is microinstruction lnext3 MAR = lv + mbru; rd; goto lnext4
+word'86 is microinstruction lnext3 MAR = lv + mbru; rd; goto lnext4 
 
-word'87 is microinstruction lnext4 pc = pc +1; fetch; goto lnext5
+word'87 is microinstruction lnext4 pc = pc +1; fetch; goto lnext5 
 
-word'88 is microinstruction lnext5 tos = mdr; goto lnext6
+word'88 is microinstruction lnext5 tos = mdr; goto lnext6 
 
-word'89 is microinstruction lnext6 mar = sp = sp + 1; wr; goto mbr2
+word'89 is microinstruction lnext6 mar = sp = sp + 1; wr; goto inst_mbr2 
 
 word'90 is microinstruction inst_90 
 
 word'91 is microinstruction inst_91 
 
-word'92 is microinstruction inst_92 
+word'92 is microinstruction inst_mbr1 goto inst_mbr2
 
-word'93 is microinstruction mbr2 jmpc
+word'93 is microinstruction inst_mbr2 jmpc 
 
 word'94 is microinstruction mbr22 
 
