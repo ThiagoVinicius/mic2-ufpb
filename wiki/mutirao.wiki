@@ -1,0 +1,66 @@
+#summary Vamos ajustar as microinstruções
+#labels problem,urgent,godhelpus
+
+= Introduction =
+
+Durante a leitura desta página, mantenha [http://en.wikipedia.org/wiki/File:Apollo13-wehaveaproblem_edit_1.ogg isto] e [http://en.wikipedia.org/wiki/Apollo_13#Explosion isso] sempre em mente.
+
+*Preâmbulo:* Temos o microcódigo da MIC2, mas não temos a MIC2!!
+
+*Detalhes do problema:*
+
+  Copiamos o código das microinstruções para a MIC2, que possui 3 barramentos, e uma Unidade de Busca de Instruções (IFU).
+
+  Temos implementada, a "MIC1.5", que possui 3 barramentos, e ~~uma Unidade de Busca de Instruções (IFU)~~
+
+  Obviamente, não vai funcionar. Dúvidas?
+
+*Mission statement:*
+
+By any means necessary, criar código que funcione na MIC1.5. Para ontem!
+
+
+*Informações adicionais:*
+  As tarefas foram pré alocadas, por integrante. Cada um de vocês vai ficar responsável por uma ou mais instruções para adaptar para a MIC1.5, como pode ser visto abaixo.
+
+  * *Uma dica:* O código de 'alto nível' da MIC1, quando montado para a MIC1.5 (automaticamente, pelo montador escrito em Java) funcionará perfeitamente. *However*, A MIC1.5 possui o barramento A, ausente na MIC1. Algumas linhas de código da MIC1 podem ser transformadas em uma só! (não é necessário armazenar um dos operandos, no registrador H, num ciclo, para somente no próximo utilizálo)
+
+  Eu quero ver as instruções otimizadas ao máximo. Nada de sair copiando o código da MIC1, na cara de pau.
+
+*Atenção:* Não alterem o código no montador java. Vocês podem usá-lo para testar se há erros de compilação ou não, mas por favor, sem bagunçar o código no SVN. _aliás, vou dar um lock nos arquivos code.txt e memory.mif_ Vou adotar este procedimento porque é provavel que algumas instruções cresçam, em número de linhas, mas não há endereços livres entre as instruções. Enquanto eu implemento a funcionalidade de mover instruções para cima e para baixo, todo mundo colando os seus códigos aqui mesmo.
+
+*Prazo:* Para ontem _e não pensem que isso é brincadeira_
+*Prazo:* Para ontem _e não pensem que isso é brincadeira_
+*Prazo:* Para ontem _e não pensem que isso é brincadeira_
+*Prazo:* Para ontem _e não pensem que isso é brincadeira_
+*Prazo:* Para ontem _e não pensem que isso é brincadeira_
+_e nem digam que eu não fui suficientemente claro_
+
+*BOA SORTE!*
+
+
+= Details =
+
+Aqui está a escalação:
+
+|| Instrução || Responsável || Comentários ||
+||  iADD     || Joedson     ||
+||  iSUB     || Jailton     ||
+||  iAND     || Amanda      ||
+||  iOR      || Gabriela    ||
+||  iDUP     || Joedson     ||
+||  iPOP     || Jailton     ||
+||  iSWAP    || Hugo        ||
+||  iBIPUSH  || Amanda      ||
+||  iLOAD    || Gabriela    ||
+||  iSTORE   || Diénert     ||
+|| ~~iWIDE~~ || nobody      ||   instrução abolida! ||
+||  iINC     || Hugo        ||
+||  iGOTO    || Gutenberg   ||
+||  iFLT     || Hugo        ||
+||  iIFEQ    || Gutenberg   ||
+||  iIF_CMP_EQ || Diénert     || cuidado nessa linha envolve as microinstruções T e F!! ||
+|| iINVOKEVIRTUAL || Gutenberg ||
+|| iRETURN   || Diénert     ||
+
+Coloquem aqui abaixo, os códigos "alto nível", por favor, não quero ver zeros e uns. Não aqui.
