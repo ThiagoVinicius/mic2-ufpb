@@ -332,6 +332,22 @@ applicable agreement for further details.
 	)
 	(flipy)
 )
+(pin
+	(output)
+	(rect 3584 1392 3760 1408)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Out_PC[31..0]" (rect 90 0 160 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
 (symbol
 	(rect 3776 1072 3952 1232)
 	(text "CONTROLEMIC" (rect 5 0 85 12)(font "Arial" ))
@@ -974,11 +990,6 @@ applicable agreement for further details.
 )
 (connector
 	(pt 3552 1960)
-	(pt 3552 1072)
-	(bus)
-)
-(connector
-	(pt 3552 1960)
 	(pt 2392 1960)
 	(bus)
 )
@@ -1457,6 +1468,21 @@ applicable agreement for further details.
 	(pt 2512 728)
 	(pt 2512 1040)
 )
+(connector
+	(pt 3584 1400)
+	(pt 3552 1400)
+	(bus)
+)
+(connector
+	(pt 3552 1960)
+	(pt 3552 1400)
+	(bus)
+)
+(connector
+	(pt 3552 1400)
+	(pt 3552 1072)
+	(bus)
+)
 (junction (pt 3080 1520))
 (junction (pt 2856 1152))
 (junction (pt 2464 688))
@@ -1477,3 +1503,4 @@ applicable agreement for further details.
 (junction (pt 3144 1504))
 (junction (pt 3728 1120))
 (junction (pt 2616 728))
+(junction (pt 3552 1400))
