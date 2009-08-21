@@ -45,11 +45,11 @@ Aqui está a escalação:
 
 || Instrução || Responsável || Comentários ||
 ||~~iADD~~   || Joedson     ||
-||  iSUB     || Jailton     ||
+||~~iSUB~~   || Jailton     ||
 ||  iAND     || Amanda      ||
 ||  iOR      || Gabriela    ||
 ||~~iDUP~~   || Joedson     ||
-||  iPOP     || Jailton     ||
+||~~iPOP~~   || Jailton     ||
 ||  iSWAP    || Hugo        ||
 ||  iBIPUSH  || Amanda      ||
 ||  iLOAD    || Gabriela    ||
@@ -71,7 +71,17 @@ iadd1     MAR=SP=SP-1;rd
 iadd2
 iadd3     MDR = TOS = MDR + TOS; wr; goto Main1
 
+iSUB:
+isub1     MAR = SP = SP - 1; rd
+isub2
+isub3     MDR = TOS = MDR - TOS; wr; goto Main1
+
 iDUP:
 idup1     MAR =SP=SP+1
 idup2     MDR = TOS; wr; goto Main1
+
+iPOP:
+ipop1     MAR = SP = SP - 1; rd
+ipop2
+ipop3     TOS = MDR; goto Main1
 }}}
