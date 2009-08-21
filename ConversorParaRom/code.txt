@@ -2,363 +2,363 @@ file_version is 1
 
 length is 512
 
-word'0 is microinstruction main pc = pc + 1; fetch; goto inst_mbr1
+word'0 is microinstruction main pc = pc + 1; fetch; goto inst_mbr1 
 
-word'1 is microinstruction nop1 goto main 
+word'1 is microinstruction inst_mbr1 goto inst_mbr2 
 
-word'2 is microinstruction iadd1 mar = sp = sp -1; rd; goto iadd2 
+word'2 is microinstruction inst_mbr2 jmpc 
 
-word'3 is microinstruction iadd2 h = tos; goto iadd3 
+word'3 is microinstruction wide1 
 
-word'4 is microinstruction iadd3 mdr = tos= mdr+h; wr; goto main 
+word'4 is microinstruction inst_157 
 
-word'5 is microinstruction isub1 mar = sp = sp-1; rd; goto isub2 
+word'5 is microinstruction nop1 goto main 
 
-word'6 is microinstruction isub2 h = tos; goto isub3 
+word'6 is microinstruction inst_158 
 
-word'7 is microinstruction isub3 mdr = mdr-h; wr; goto main 
+word'7 is microinstruction inst_159 
 
-word'8 is microinstruction iand1 mar = sp = sp-1; rd; goto iand2 
+word'8 is microinstruction inst_160 
 
-word'9 is microinstruction iand2 h = tos; goto iand3 
+word'9 is microinstruction inst_161 
 
-word'10 is microinstruction iand3 mdr = tos = mdr and h; wr; goto main 
+word'10 is microinstruction inst_162 
 
-word'11 is microinstruction ior1 mar = sp = sp-1; rd; goto ior2 
+word'11 is microinstruction inst_163 
 
-word'12 is microinstruction ior2 h = tos; goto ior3 
+word'12 is microinstruction inst_164 
 
-word'13 is microinstruction ior3 mdr = tos = mdr or h; wr; goto main 
+word'13 is microinstruction inst_165 
 
-word'14 is microinstruction dup1 mar = sp = sp+1;  goto dup2 
+word'14 is microinstruction inst_166 
 
-word'15 is microinstruction dup2 mdr = tos; wr; goto main 
+word'15 is microinstruction inst_167 
 
-word'16 is microinstruction pop1 mar = sp = sp-1; rd; goto pop2 
+word'16 is microinstruction inst_168 
 
-word'17 is microinstruction pop2 goto pop3 
+word'17 is microinstruction inst_169 
 
-word'18 is microinstruction pop3 tos = mdr; goto main 
+word'18 is microinstruction inst_170 
 
-word'19 is microinstruction swap1 mar = sp-1; rd; goto swap2 
+word'19 is microinstruction inst_171 
 
-word'20 is microinstruction swap2 mar = sp; goto swap3 
+word'20 is microinstruction inst_172 
 
-word'21 is microinstruction swap3 h = mdr; wr; goto swap4 
+word'21 is microinstruction inst_173 
 
-word'22 is microinstruction swap4 mdr = tos; goto swap5 
+word'22 is microinstruction inst_174 
 
-word'23 is microinstruction swap5 mar = sp-1;wr; goto swap6 
+word'23 is microinstruction inst_175 
 
-word'24 is microinstruction swap6 tos = h; goto main 
+word'24 is microinstruction iadd1 mar = sp = sp -1; rd; goto iadd2 
 
-word'25 is microinstruction bipush1 sp = mar = sp+1; goto bipush2 
+word'25 is microinstruction iadd2 h = tos; goto iadd3 
 
-word'26 is microinstruction bipush2 mdr = tos = mbr; wr; goto main 
+word'26 is microinstruction iadd3 mdr = tos= mdr+h; wr; goto main 
 
-word'27 is microinstruction iload1 mar = lv+mbru; rd; goto iload2 
+word'27 is microinstruction inst_176 
 
-word'28 is microinstruction iload2 mar = sp = sp+1; goto iload3 
+word'28 is microinstruction inst_177 
 
-word'29 is microinstruction iload3 tos = mdr; wr; goto main 
+word'29 is microinstruction inst_178 
 
-word'30 is microinstruction istore1 mar = lv+mbru; goto istore2 
+word'30 is microinstruction isub1 mar = sp = sp-1; rd; goto isub2 
 
-word'31 is microinstruction istore2 mdr = tos;wr; goto istore3 
+word'31 is microinstruction isub2 h = tos; goto isub3 
 
-word'32 is microinstruction istore3 mar = sp = sp-1; rd; goto istore4 
+word'32 is microinstruction isub3 mdr = mdr-h; wr; goto main 
 
-word'33 is microinstruction istore4 goto istore5 
+word'33 is microinstruction inst_102 
 
-word'34 is microinstruction istore5 tos = mdr; goto main 
+word'34 is microinstruction inst_103 
 
-word'35 is microinstruction wide1 
+word'35 is microinstruction inst_104 
 
-word'36 is microinstruction wide_iload1 mar = lv+mbr2u; rd; goto iload2 
+word'36 is microinstruction iand1 mar = sp = sp-1; rd; goto iand2 
 
-word'37 is microinstruction wide_istore1 mar = lv+mbr2u; goto istore2 
+word'37 is microinstruction iand2 h = tos; goto iand3 
 
-word'38 is microinstruction ldc_w1 mar = cpp+mbr2u; rd; goto iload2 
+word'38 is microinstruction iand3 mdr = tos = mdr and h; wr; goto main 
 
-word'39 is microinstruction iinc1 mar = lv+mbru; rd; goto iinc2 
+word'39 is microinstruction inst_105 
 
-word'40 is microinstruction iinc2 h = mbr; goto iinc3 
+word'40 is microinstruction inst_106 
 
-word'41 is microinstruction iinc3 mdr = mdr+h; wr; goto main 
+word'41 is microinstruction inst_107 
 
-word'42 is microinstruction goto1 h = pc-1; goto goto2 
+word'42 is microinstruction ior1 mar = sp = sp-1; rd; goto ior2 
 
-word'43 is microinstruction goto2 pc = h+mbr2; goto goto3 
+word'43 is microinstruction ior2 h = tos; goto ior3 
 
-word'44 is microinstruction goto3 goto goto4 
+word'44 is microinstruction ior3 mdr = tos = mdr or h; wr; goto main 
 
-word'45 is microinstruction goto4 goto main; 
+word'45 is microinstruction inst_108 
 
-word'46 is microinstruction iflt1 mar = sp = sp-1; rd; goto iflt2 
+word'46 is microinstruction inst_109 
 
-word'47 is microinstruction iflt2 opc = tos; goto iflt3 
+word'47 is microinstruction inst_110 
 
-word'48 is microinstruction iflt3 tos = mdr; goto iflt4 
+word'48 is microinstruction dup1 mar = sp = sp+1;  goto dup2 
 
-word'49 is microinstruction iflt4 opc; if n goto t else goto f 
+word'49 is microinstruction dup2 mdr = tos; wr; goto main 
 
-word'50 is microinstruction ifeq1 mar = sp = sp-1; rd; goto ifeq2 
+word'50 is microinstruction inst_111 
 
-word'51 is microinstruction ifeq2 opc = tos; goto ifeq3 
+word'51 is microinstruction inst_112 
 
-word'52 is microinstruction ifeq3 tos = mdr; goto ifeq4 
+word'52 is microinstruction inst_113 
 
-word'53 is microinstruction ifeq4 opc; if z goto t else goto f 
+word'53 is microinstruction pop1 mar = sp = sp-1; rd; goto pop2 
 
-word'54 is microinstruction if_icmpeq1 mar = sp = sp-1; rd; goto if_icmpeq2 
+word'54 is microinstruction pop2 goto pop3 
 
-word'55 is microinstruction if_icmpeq2 mar = sp = sp-1; goto if_icmpeq3 
+word'55 is microinstruction pop3 tos = mdr; goto main 
 
-word'56 is microinstruction if_icmpeq3 h = mdr; rd; goto if_icmpeq4 
+word'56 is microinstruction inst_114 
 
-word'57 is microinstruction if_icmpeq4 opc = tos; goto if_icmpeq5 
+word'57 is microinstruction inst_115 
 
-word'58 is microinstruction if_icmpeq5 tos = mdr; goto if_icmpeq6 
+word'58 is microinstruction inst_116 
 
-word'59 is microinstruction if_icmpeq6 h-opc; if z goto t else goto f 
+word'59 is microinstruction swap1 mar = sp-1; rd; goto swap2 
 
-word'60 is microinstruction t h = pc-1; goto goto2 
+word'60 is microinstruction swap2 mar = sp; goto swap3 
 
-word'61 is microinstruction inst_61 
+word'61 is microinstruction swap3 h = mdr; wr; goto swap4 
 
-word'62 is microinstruction inst_62 
+word'62 is microinstruction swap4 mdr = tos; goto swap5 
 
-word'63 is microinstruction invokevirtual1 mar = cpp+mbr2u; rd; goto invokevirtual2 
+word'63 is microinstruction swap5 mar = sp-1;wr; goto swap6 
 
-word'64 is microinstruction invokevirtual2 opc = pc; goto invokevirtual3 
+word'64 is microinstruction swap6 tos = h; goto main 
 
-word'65 is microinstruction invokevirtual3 pc = mdr; goto invokevirtual4 
+word'65 is microinstruction inst_117 
 
-word'66 is microinstruction invokevirtual4 tos = sp-mbr2u; goto invokevirtual5 
+word'66 is microinstruction inst_118 
 
-word'67 is microinstruction invokevirtual5 tos = mar = h = tos+1; goto invokevirtual6 
+word'67 is microinstruction inst_119 
 
-word'68 is microinstruction invokevirtual6 mdr = sp+mbr2u+1; wr; goto invokevirtual7 
+word'68 is microinstruction bipush1 sp = mar = sp+1; goto bipush2 
 
-word'69 is microinstruction invokevirtual7 mar = sp = mdr; goto invokevirtual8 
+word'69 is microinstruction bipush2 mdr = tos = mbr; wr; goto main 
 
-word'70 is microinstruction invokevirtual8 mdr = opc; goto invokevirtual9 
+word'70 is microinstruction inst_120 
 
-word'71 is microinstruction invokevirtual9 mar = sp = sp+1; goto invokevirtual10 
+word'71 is microinstruction inst_61 
 
-word'72 is microinstruction invokevirtual10 mdr = lv; wr; goto invokevirtual11 
+word'72 is microinstruction iload1 mar = lv+mbru; rd; goto iload2 
 
-word'73 is microinstruction invokevirtual11 lv = tos; goto main 
+word'73 is microinstruction iload2 mar = sp = sp+1; goto iload3 
 
-word'74 is microinstruction ireturn1 mar = sp = lv; rd; goto ireturn2 
+word'74 is microinstruction iload3 tos = mdr; wr; goto main 
 
-word'75 is microinstruction ireturn2 goto ireturn3 
+word'75 is microinstruction inst_62 
 
-word'76 is microinstruction ireturn3 lv = mar = mdr; rd; goto ireturn4 
+word'76 is microinstruction inst_82 
 
-word'77 is microinstruction ireturn4 mar = lv+1; goto ireturn5 
+word'77 is microinstruction inst_83 
 
-word'78 is microinstruction ireturn5 pc = mdr; rd; goto ireturn6 
+word'78 is microinstruction istore1 mar = lv+mbru; goto istore2 
 
-word'79 is microinstruction ireturn6 mar = sp; goto ireturn7 
+word'79 is microinstruction istore2 mdr = tos;wr; goto istore3 
 
-word'80 is microinstruction ireturn7 lv = mdr; goto ireturn8 
+word'80 is microinstruction istore3 mar = sp = sp-1; rd; goto istore4 
 
-word'81 is microinstruction ireturn8 mdr = tos; wr; goto main 
+word'81 is microinstruction istore4 goto istore5 
 
-word'82 is microinstruction inst_82 
+word'82 is microinstruction istore5 tos = mdr; goto main 
 
-word'83 is microinstruction inst_83 
+word'83 is microinstruction inst_90 
 
-word'84 is microinstruction lnext1 PC = PC + 1; FETCH; goto lnext2 
+word'84 is microinstruction inst_91 
 
-word'85 is microinstruction lnext2 goto lnext3 
+word'85 is microinstruction mbr22 
 
-word'86 is microinstruction lnext3 MAR = lv + mbru; rd; goto lnext4 
+word'86 is microinstruction inst_95 
 
-word'87 is microinstruction lnext4 pc = pc +1; fetch; goto lnext5 
+word'87 is microinstruction ldc_w1 mar = cpp+mbr2u; rd; goto iload2 
 
-word'88 is microinstruction lnext5 tos = mdr; goto lnext6 
+word'88 is microinstruction inst_96 
 
-word'89 is microinstruction lnext6 mar = sp = sp + 1; wr; goto inst_mbr2 
+word'89 is microinstruction wide_iload1 mar = lv+mbr2u; rd; goto iload2 
 
-word'90 is microinstruction inst_90 
+word'90 is microinstruction inst_97 
 
-word'91 is microinstruction inst_91 
+word'91 is microinstruction wide_istore1 mar = lv+mbr2u; goto istore2 
 
-word'92 is microinstruction inst_mbr1 goto inst_mbr2
+word'92 is microinstruction inst_98 
 
-word'93 is microinstruction inst_mbr2 jmpc 
+word'93 is microinstruction iinc1 mar = lv+mbru; rd; goto iinc2 
 
-word'94 is microinstruction mbr22 
+word'94 is microinstruction iinc2 h = mbr; goto iinc3 
 
-word'95 is microinstruction inst_95 
+word'95 is microinstruction iinc3 mdr = mdr+h; wr; goto main 
 
-word'96 is microinstruction inst_96 
+word'96 is microinstruction inst_99 
 
-word'97 is microinstruction inst_97 
+word'97 is microinstruction inst_100 
 
-word'98 is microinstruction inst_98 
+word'98 is microinstruction inst_101 
 
-word'99 is microinstruction inst_99 
+word'99 is microinstruction goto1 h = pc-1; goto goto2 
 
-word'100 is microinstruction inst_100 
+word'100 is microinstruction goto2 pc = h+mbr2; goto goto3 
 
-word'101 is microinstruction inst_101 
+word'101 is microinstruction goto3 goto goto4 
 
-word'102 is microinstruction inst_102 
+word'102 is microinstruction goto4 goto main; 
 
-word'103 is microinstruction inst_103 
+word'103 is microinstruction inst_121 
 
-word'104 is microinstruction inst_104 
+word'104 is microinstruction inst_122 
 
-word'105 is microinstruction inst_105 
+word'105 is microinstruction inst_123 
 
-word'106 is microinstruction inst_106 
+word'106 is microinstruction inst_124 
 
-word'107 is microinstruction inst_107 
+word'107 is microinstruction iflt1 mar = sp = sp-1; rd; goto iflt2 
 
-word'108 is microinstruction inst_108 
+word'108 is microinstruction iflt2 opc = tos; goto iflt3 
 
-word'109 is microinstruction inst_109 
+word'109 is microinstruction iflt3 tos = mdr; goto iflt4 
 
-word'110 is microinstruction inst_110 
+word'110 is microinstruction iflt4 opc; if n goto t else goto f 
 
-word'111 is microinstruction inst_111 
+word'111 is microinstruction inst_125 
 
-word'112 is microinstruction inst_112 
+word'112 is microinstruction inst_126 
 
-word'113 is microinstruction inst_113 
+word'113 is microinstruction inst_127 
 
-word'114 is microinstruction inst_114 
+word'114 is microinstruction ifeq1 mar = sp = sp-1; rd; goto ifeq2 
 
-word'115 is microinstruction inst_115 
+word'115 is microinstruction ifeq2 opc = tos; goto ifeq3 
 
-word'116 is microinstruction inst_116 
+word'116 is microinstruction ifeq3 tos = mdr; goto ifeq4 
 
-word'117 is microinstruction inst_117 
+word'117 is microinstruction ifeq4 opc; if z goto t else goto f 
 
-word'118 is microinstruction inst_118 
+word'118 is microinstruction inst_128 
 
-word'119 is microinstruction inst_119 
+word'119 is microinstruction inst_129 
 
-word'120 is microinstruction inst_120 
+word'120 is microinstruction inst_130 
 
-word'121 is microinstruction inst_121 
+word'121 is microinstruction if_icmpeq1 mar = sp = sp-1; rd; goto if_icmpeq2 
 
-word'122 is microinstruction inst_122 
+word'122 is microinstruction if_icmpeq2 mar = sp = sp-1; goto if_icmpeq3 
 
-word'123 is microinstruction inst_123 
+word'123 is microinstruction if_icmpeq3 h = mdr; rd; goto if_icmpeq4 
 
-word'124 is microinstruction inst_124 
+word'124 is microinstruction if_icmpeq4 opc = tos; goto if_icmpeq5 
 
-word'125 is microinstruction inst_125 
+word'125 is microinstruction if_icmpeq5 tos = mdr; goto if_icmpeq6 
 
-word'126 is microinstruction inst_126 
+word'126 is microinstruction if_icmpeq6 h-opc; if z goto t else goto f 
 
-word'127 is microinstruction inst_127 
+word'127 is microinstruction t h = pc-1; goto goto2 
 
-word'128 is microinstruction inst_128 
+word'128 is microinstruction inst_131 
 
-word'129 is microinstruction inst_129 
+word'129 is microinstruction inst_132 
 
-word'130 is microinstruction inst_130 
+word'130 is microinstruction inst_133 
 
-word'131 is microinstruction inst_131 
+word'131 is microinstruction invokevirtual1 mar = cpp+mbr2u; rd; goto invokevirtual2 
 
-word'132 is microinstruction inst_132 
+word'132 is microinstruction invokevirtual2 opc = pc; goto invokevirtual3 
 
-word'133 is microinstruction inst_133 
+word'133 is microinstruction invokevirtual3 pc = mdr; goto invokevirtual4 
 
-word'134 is microinstruction inst_134 
+word'134 is microinstruction invokevirtual4 tos = sp-mbr2u; goto invokevirtual5 
 
-word'135 is microinstruction inst_135 
+word'135 is microinstruction invokevirtual5 tos = mar = h = tos+1; goto invokevirtual6 
 
-word'136 is microinstruction inst_136 
+word'136 is microinstruction invokevirtual6 mdr = sp+mbr2u+1; wr; goto invokevirtual7 
 
-word'137 is microinstruction inst_137 
+word'137 is microinstruction invokevirtual7 mar = sp = mdr; goto invokevirtual8 
 
-word'138 is microinstruction inst_138 
+word'138 is microinstruction invokevirtual8 mdr = opc; goto invokevirtual9 
 
-word'139 is microinstruction inst_139 
+word'139 is microinstruction invokevirtual9 mar = sp = sp+1; goto invokevirtual10 
 
-word'140 is microinstruction inst_140 
+word'140 is microinstruction invokevirtual10 mdr = lv; wr; goto invokevirtual11 
 
-word'141 is microinstruction inst_141 
+word'141 is microinstruction invokevirtual11 lv = tos; goto main 
 
-word'142 is microinstruction inst_142 
+word'142 is microinstruction inst_134 
 
-word'143 is microinstruction inst_143 
+word'143 is microinstruction inst_135 
 
-word'144 is microinstruction inst_144 
+word'144 is microinstruction inst_136 
 
-word'145 is microinstruction inst_145 
+word'145 is microinstruction inst_137 
 
-word'146 is microinstruction inst_146 
+word'146 is microinstruction inst_138 
 
-word'147 is microinstruction inst_147 
+word'147 is microinstruction inst_139 
 
-word'148 is microinstruction inst_148 
+word'148 is microinstruction inst_140 
 
-word'149 is microinstruction inst_149 
+word'149 is microinstruction inst_141 
 
-word'150 is microinstruction inst_150 
+word'150 is microinstruction inst_142 
 
-word'151 is microinstruction inst_151 
+word'151 is microinstruction inst_143 
 
-word'152 is microinstruction inst_152 
+word'152 is microinstruction inst_144 
 
-word'153 is microinstruction inst_153 
+word'153 is microinstruction inst_145 
 
-word'154 is microinstruction inst_154 
+word'154 is microinstruction inst_146 
 
-word'155 is microinstruction inst_155 
+word'155 is microinstruction ireturn1 mar = sp = lv; rd; goto ireturn2 
 
-word'156 is microinstruction inst_156 
+word'156 is microinstruction ireturn2 goto ireturn3 
 
-word'157 is microinstruction inst_157 
+word'157 is microinstruction ireturn3 lv = mar = mdr; rd; goto ireturn4 
 
-word'158 is microinstruction inst_158 
+word'158 is microinstruction ireturn4 mar = lv+1; goto ireturn5 
 
-word'159 is microinstruction inst_159 
+word'159 is microinstruction ireturn5 pc = mdr; rd; goto ireturn6 
 
-word'160 is microinstruction inst_160 
+word'160 is microinstruction ireturn6 mar = sp; goto ireturn7 
 
-word'161 is microinstruction inst_161 
+word'161 is microinstruction ireturn7 lv = mdr; goto ireturn8 
 
-word'162 is microinstruction inst_162 
+word'162 is microinstruction ireturn8 mdr = tos; wr; goto main 
 
-word'163 is microinstruction inst_163 
+word'163 is microinstruction inst_147 
 
-word'164 is microinstruction inst_164 
+word'164 is microinstruction inst_148 
 
-word'165 is microinstruction inst_165 
+word'165 is microinstruction inst_149 
 
-word'166 is microinstruction inst_166 
+word'166 is microinstruction inst_150 
 
-word'167 is microinstruction inst_167 
+word'167 is microinstruction inst_151 
 
-word'168 is microinstruction inst_168 
+word'168 is microinstruction inst_152 
 
-word'169 is microinstruction inst_169 
+word'169 is microinstruction inst_153 
 
-word'170 is microinstruction inst_170 
+word'170 is microinstruction inst_154 
 
-word'171 is microinstruction inst_171 
+word'171 is microinstruction inst_155 
 
-word'172 is microinstruction inst_172 
+word'172 is microinstruction inst_156 
 
-word'173 is microinstruction inst_173 
+word'173 is microinstruction lnext1 PC = PC + 1; FETCH; goto lnext2 
 
-word'174 is microinstruction inst_174 
+word'174 is microinstruction lnext2 goto lnext3 
 
-word'175 is microinstruction inst_175 
+word'175 is microinstruction lnext3 MAR = lv + mbru; rd; goto lnext4 
 
-word'176 is microinstruction inst_176 
+word'176 is microinstruction lnext4 pc = pc +1; fetch; goto lnext5 
 
-word'177 is microinstruction inst_177 
+word'177 is microinstruction lnext5 tos = mdr; goto lnext6 
 
-word'178 is microinstruction inst_178 
+word'178 is microinstruction lnext6 mar = sp = sp + 1; wr; goto inst_mbr2 
 
 word'179 is microinstruction inst_179 
 
@@ -634,143 +634,143 @@ word'314 is microinstruction inst_314
 
 word'315 is microinstruction inst_315 
 
-word'316 is microinstruction f h = mbr2; goto f2 
+word'316 is microinstruction inst_318 
 
-word'317 is microinstruction f2 goto main 
+word'317 is microinstruction inst_319 
 
-word'318 is microinstruction inst_318 
+word'318 is microinstruction inst_320 
 
-word'319 is microinstruction inst_319 
+word'319 is microinstruction inst_321 
 
-word'320 is microinstruction inst_320 
+word'320 is microinstruction inst_322 
 
-word'321 is microinstruction inst_321 
+word'321 is microinstruction inst_323 
 
-word'322 is microinstruction inst_322 
+word'322 is microinstruction inst_324 
 
-word'323 is microinstruction inst_323 
+word'323 is microinstruction inst_325 
 
-word'324 is microinstruction inst_324 
+word'324 is microinstruction inst_326 
 
-word'325 is microinstruction inst_325 
+word'325 is microinstruction inst_327 
 
-word'326 is microinstruction inst_326 
+word'326 is microinstruction inst_328 
 
-word'327 is microinstruction inst_327 
+word'327 is microinstruction inst_329 
 
-word'328 is microinstruction inst_328 
+word'328 is microinstruction inst_330 
 
-word'329 is microinstruction inst_329 
+word'329 is microinstruction inst_331 
 
-word'330 is microinstruction inst_330 
+word'330 is microinstruction inst_332 
 
-word'331 is microinstruction inst_331 
+word'331 is microinstruction inst_333 
 
-word'332 is microinstruction inst_332 
+word'332 is microinstruction inst_334 
 
-word'333 is microinstruction inst_333 
+word'333 is microinstruction inst_335 
 
-word'334 is microinstruction inst_334 
+word'334 is microinstruction inst_336 
 
-word'335 is microinstruction inst_335 
+word'335 is microinstruction inst_337 
 
-word'336 is microinstruction inst_336 
+word'336 is microinstruction inst_338 
 
-word'337 is microinstruction inst_337 
+word'337 is microinstruction inst_339 
 
-word'338 is microinstruction inst_338 
+word'338 is microinstruction inst_340 
 
-word'339 is microinstruction inst_339 
+word'339 is microinstruction inst_341 
 
-word'340 is microinstruction inst_340 
+word'340 is microinstruction inst_342 
 
-word'341 is microinstruction inst_341 
+word'341 is microinstruction inst_343 
 
-word'342 is microinstruction inst_342 
+word'342 is microinstruction inst_344 
 
-word'343 is microinstruction inst_343 
+word'343 is microinstruction inst_345 
 
-word'344 is microinstruction inst_344 
+word'344 is microinstruction inst_346 
 
-word'345 is microinstruction inst_345 
+word'345 is microinstruction inst_347 
 
-word'346 is microinstruction inst_346 
+word'346 is microinstruction inst_348 
 
-word'347 is microinstruction inst_347 
+word'347 is microinstruction inst_349 
 
-word'348 is microinstruction inst_348 
+word'348 is microinstruction inst_350 
 
-word'349 is microinstruction inst_349 
+word'349 is microinstruction inst_351 
 
-word'350 is microinstruction inst_350 
+word'350 is microinstruction inst_352 
 
-word'351 is microinstruction inst_351 
+word'351 is microinstruction inst_353 
 
-word'352 is microinstruction inst_352 
+word'352 is microinstruction inst_354 
 
-word'353 is microinstruction inst_353 
+word'353 is microinstruction inst_355 
 
-word'354 is microinstruction inst_354 
+word'354 is microinstruction inst_356 
 
-word'355 is microinstruction inst_355 
+word'355 is microinstruction inst_357 
 
-word'356 is microinstruction inst_356 
+word'356 is microinstruction inst_358 
 
-word'357 is microinstruction inst_357 
+word'357 is microinstruction inst_359 
 
-word'358 is microinstruction inst_358 
+word'358 is microinstruction inst_360 
 
-word'359 is microinstruction inst_359 
+word'359 is microinstruction inst_361 
 
-word'360 is microinstruction inst_360 
+word'360 is microinstruction inst_362 
 
-word'361 is microinstruction inst_361 
+word'361 is microinstruction inst_363 
 
-word'362 is microinstruction inst_362 
+word'362 is microinstruction inst_364 
 
-word'363 is microinstruction inst_363 
+word'363 is microinstruction inst_365 
 
-word'364 is microinstruction inst_364 
+word'364 is microinstruction inst_366 
 
-word'365 is microinstruction inst_365 
+word'365 is microinstruction inst_367 
 
-word'366 is microinstruction inst_366 
+word'366 is microinstruction inst_368 
 
-word'367 is microinstruction inst_367 
+word'367 is microinstruction inst_369 
 
-word'368 is microinstruction inst_368 
+word'368 is microinstruction inst_370 
 
-word'369 is microinstruction inst_369 
+word'369 is microinstruction inst_371 
 
-word'370 is microinstruction inst_370 
+word'370 is microinstruction inst_372 
 
-word'371 is microinstruction inst_371 
+word'371 is microinstruction inst_373 
 
-word'372 is microinstruction inst_372 
+word'372 is microinstruction inst_374 
 
-word'373 is microinstruction inst_373 
+word'373 is microinstruction inst_375 
 
-word'374 is microinstruction inst_374 
+word'374 is microinstruction inst_376 
 
-word'375 is microinstruction inst_375 
+word'375 is microinstruction inst_377 
 
-word'376 is microinstruction inst_376 
+word'376 is microinstruction inst_378 
 
-word'377 is microinstruction inst_377 
+word'377 is microinstruction inst_379 
 
-word'378 is microinstruction inst_378 
+word'378 is microinstruction inst_380 
 
-word'379 is microinstruction inst_379 
+word'379 is microinstruction inst_381 
 
-word'380 is microinstruction inst_380 
+word'380 is microinstruction inst_382 
 
-word'381 is microinstruction inst_381 
+word'381 is microinstruction inst_383 
 
-word'382 is microinstruction inst_382 
+word'382 is microinstruction inst_384 
 
-word'383 is microinstruction inst_383 
+word'383 is microinstruction f h = mbr2; goto f2 
 
-word'384 is microinstruction inst_384 
+word'384 is microinstruction f2 goto main 
 
 word'385 is microinstruction inst_385 
 
