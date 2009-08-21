@@ -44,11 +44,11 @@ _e nem digam que eu não fui suficientemente claro_
 Aqui está a escalação:
 
 || Instrução || Responsável || Comentários ||
-||  iADD     || Joedson     ||
+||~~iADD~~   || Joedson     ||
 ||  iSUB     || Jailton     ||
 ||  iAND     || Amanda      ||
 ||  iOR      || Gabriela    ||
-||  iDUP     || Joedson     ||
+||~~iDUP~~   || Joedson     ||
 ||  iPOP     || Jailton     ||
 ||  iSWAP    || Hugo        ||
 ||  iBIPUSH  || Amanda      ||
@@ -65,7 +65,8 @@ Aqui está a escalação:
 
 Coloquem aqui abaixo, os códigos "alto nível", por favor, não quero ver zeros e uns. Não aqui.
 
-iADD1:
+{{{
+iADD:
 iadd1     MAR=SP=SP-1;rd
 iadd2
 iadd3     MDR = TOS = MDR + TOS; wr; goto Main1
@@ -73,3 +74,4 @@ iadd3     MDR = TOS = MDR + TOS; wr; goto Main1
 iDUP:
 idup1     MAR =SP=SP+1
 idup2     MDR = TOS; wr; goto Main1
+}}}
