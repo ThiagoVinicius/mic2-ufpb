@@ -64,3 +64,12 @@ Aqui está a escalação:
 || iRETURN   || Diénert     ||
 
 Coloquem aqui abaixo, os códigos "alto nível", por favor, não quero ver zeros e uns. Não aqui.
+
+iADD1:
+iadd1     MAR=SP=SP-1;rd
+iadd2
+iadd3     MDR = TOS = MDR + TOS; wr; goto Main1
+
+iDUP:
+idup1     MAR =SP=SP+1
+idup2     MDR = TOS; wr; goto Main1
