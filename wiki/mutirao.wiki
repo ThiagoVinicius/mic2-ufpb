@@ -97,4 +97,25 @@ iifeq1    MAR = SP = SP - 1; rd
 iifeq2    OPC = TOS
 iifeq3    TOS = MDR
 iifeq4    Z = OPC; if (Z) goto T; else goto F
+
+iINVOKEVIRTUAL:
+iinvokevirtual1    PC = PC + 1; fetch
+iinvokevirtual2    
+iinvokevirtual3    MAR = CPP + MBRU or MBRU << 8
+iinvokevirtual4    OPC = PC + 1
+iinvokevirtual5    PC = MDR; fetch
+iinvokevirtual6    PC = PC + 1; fetch
+iinvokevirtual7    
+iinvokevirtual8    PC = PC + 1; fetch
+iinvokevirtual9    TOS = SP - MBRU or MBRU << 8
+iinvokevirtual10   TOS = MAR = TOS + 1
+iinvokevirtual11   PC = PC + 1; fetch
+iinvokevirtual12   
+iinvokevirtual13   MDR + SP + MBRU or MBRU + 1; wr
+iinvokevirtual14   MAR = SP = MDR; 
+iinvokevirtual15   MDR = OPC; wr 
+iinvokevirtual16   MAR = SP = SP + 1 
+iinvokevirtual17   MDR = LV; wr 
+iinvokevirtual18   PC = PC + 1; fetch
+iinvokevirtual19   LV = TOS; goto Main1 
 }}}
