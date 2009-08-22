@@ -89,6 +89,6 @@ iGOTO:
 igoto1    OPC = PC - 1
 igoto2    PC = PC + 1; fetch
 igoto3
-igoto4    pc = opc + mbru or mbr << 8
+igoto4    PC = OPC + MBRU or MBR << 8
 igoto5    goto Main1
 }}}
