@@ -53,15 +53,15 @@ Aqui está a escalação:
 ||  iSWAP    || Hugo        ||
 ||  iBIPUSH  || Amanda      ||
 ||  iLOAD    || Gabriela    ||
-||  iSTORE   || Diénert     ||
+|| ~~iSTORE~~|| Diénert     ||
 || ~~iWIDE~~ || nobody      ||   instrução abolida! ||
 ||  iINC     || Hugo        ||
 || ~~iGOTO~~ || Gutenberg   ||
 ||  iFLT     || Hugo        ||
 || ~~iIFEQ~~ || Gutenberg   ||
-||  iIF_CMP_EQ || Diénert     || cuidado nessa linha envolve as microinstruções T e F!! ||
+|| ~~iIF_CMP_EQ~~ || Diénert     || cuidado nessa linha envolve as microinstruções T e F!! ||
 || ~~iINVOKEVIRTUAL~~ || Gutenberg ||
-|| iRETURN   || Diénert     ||
+|| ~~iRETURN~~ || Diénert     ||
 
 Coloquem aqui abaixo, os códigos "alto nível", por favor, não quero ver zeros e uns. Não aqui.
 
@@ -118,4 +118,31 @@ iinvokevirtual16   MAR = SP = SP + 1
 iinvokevirtual17   MDR = LV; wr 
 iinvokevirtual18   PC = PC + 1; fetch
 iinvokevirtual19   LV = TOS; goto Main1 
+
+iSTORE:
+istore1:   MAR = MBRU + LV
+istore2:   MDR = TOS; wr
+istore3:   SP = MAR = SP - 1; rd
+istore4:   PC = PC + 1; fetch
+istore5:   TOS = MDR; goto Main1
+
+iIF_CMP_EQ:
+iif_cmp_eq1   MAR = SP = SP - 1; rd
+iif_cmp_eq2   MAR = SP = SP - 1
+iif_cmp_eq3   H = MDR; rd
+iif_cmp_eq4   OPC = TOS
+iif_cmp_eq5   TOS = MDR
+iif_cmp_eq6   Z = OPC - H; if (Z) goto T; else goto F
+
+
+iRRETURN:
+ireturn1:   MAR = SP = LV; rd
+ireturn2:   
+ireturn3:   LV = MAR = MDR;rd
+ireturn4:   MAR = LV + 1
+ireturn5:   PC = MDR; rd; fetch
+ireturn6:   MAR = SP
+ireturn7:   LV = MDR
+ireturn8:   MDR = TOS; wr; goto Main1
+
 }}}
