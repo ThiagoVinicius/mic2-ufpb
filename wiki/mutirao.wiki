@@ -84,4 +84,11 @@ iPOP:
 ipop1     MAR = SP = SP - 1; rd
 ipop2
 ipop3     TOS = MDR; goto Main1
+
+iGOTO:
+igoto1    OPC = PC - 1
+igoto2    PC = PC + 1; fetch
+igoto3
+igoto4    pc = opc + mbru or mbr << 8
+igoto5    goto Main1
 }}}
