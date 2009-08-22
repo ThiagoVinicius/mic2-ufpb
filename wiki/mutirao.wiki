@@ -56,11 +56,11 @@ Aqui está a escalação:
 ||  iSTORE   || Diénert     ||
 || ~~iWIDE~~ || nobody      ||   instrução abolida! ||
 ||  iINC     || Hugo        ||
-||  iGOTO    || Gutenberg   ||
+|| ~~iGOTO~~ || Gutenberg   ||
 ||  iFLT     || Hugo        ||
-||  iIFEQ    || Gutenberg   ||
+|| ~~iIFEQ~~ || Gutenberg   ||
 ||  iIF_CMP_EQ || Diénert     || cuidado nessa linha envolve as microinstruções T e F!! ||
-|| iINVOKEVIRTUAL || Gutenberg ||
+|| ~~iINVOKEVIRTUAL~~ || Gutenberg ||
 || iRETURN   || Diénert     ||
 
 Coloquem aqui abaixo, os códigos "alto nível", por favor, não quero ver zeros e uns. Não aqui.
