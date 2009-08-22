@@ -91,4 +91,10 @@ igoto2    PC = PC + 1; fetch
 igoto3
 igoto4    PC = OPC + MBRU or MBR << 8
 igoto5    goto Main1
+
+iIFEQ
+iifeq1    MAR = SP = SP - 1; rd
+iifeq2    OPC = TOS
+iifeq3    TOS = MDR
+iifeq4    Z = OPC; if (Z) goto T; else goto F
 }}}
