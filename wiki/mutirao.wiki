@@ -110,7 +110,7 @@ iinvokevirtual7    PC = PC + 1; fetch
 iinvokevirtual8    H  = MBRU << 8
 iinvokevirtual9    H  = MBRU or H
 iinvokevirtual10   PC = PC + 1; fetch
-iinvokevirtual11   TOS = SP - MBRU or MBRU << 8
+iinvokevirtual11   TOS = SP - H
 iinvokevirtual12   TOS = MAR = TOS + 1
 iinvokevirtual13   PC = PC + 1; fetch
 iinvokevirtual14   H  = MBRU << 8
