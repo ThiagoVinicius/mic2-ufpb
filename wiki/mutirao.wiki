@@ -47,19 +47,19 @@ Aqui está a escalação:
 ||~~iADD~~   || Joedson     ||
 ||~~iSUB~~   || Jailton     ||
 ||  iAND     || Amanda      ||
-||  iOR      || Gabriela    ||
+||~~iOR~~    || Gabriela    ||
 ||~~iDUP~~   || Joedson     ||
 ||~~iPOP~~   || Jailton     ||
 ||  iSWAP    || Hugo        ||
 ||  iBIPUSH  || Amanda      ||
-||  iLOAD    || Gabriela    ||
+||~~iLOAD~~  || Gabriela    ||
 || ~~iSTORE~~|| Diénert     ||
 || ~~iWIDE~~ || nobody      ||   instrução abolida! ||
 ||  iINC     || Hugo        ||
 || ~~iGOTO~~ || Gutenberg   ||
 ||  iFLT     || Hugo        ||
 || ~~iIFEQ~~ || Gutenberg   ||
-|| ~~iIF_CMP_EQ~~ || Diénert     || cuidado nessa linha envolve as microinstruções T e F!! ||
+||~~iIF_CMP_EQ~~|| Diénert     || cuidado nessa linha envolve as microinstruções T e F!! ||
 || ~~iINVOKEVIRTUAL~~ || Gutenberg ||
 || ~~iRETURN~~ || Diénert     ||
 
@@ -157,5 +157,17 @@ ireturn5:   PC = MDR; rd; fetch
 ireturn6:   MAR = SP
 ireturn7:   LV = MDR
 ireturn8:   MDR = TOS; wr; goto Main1
+
+iOR:
+ior1   MAR = SP = SP-1;rd; goto ior2
+ior2   goto ior3
+ior3   MDR = TOS = MDR OR TOS; wr; goto Main1
+
+iLOAD:
+iload1   H = LV; goto iload2
+iload2   MAR = MBRU +H; rd;; goto iload3
+iload3   MAR = SP = SP + 1; goto iload4
+iload4   PC = PC + 1; fetch; wr; goto iload5
+iload5   TOS = MDR; goto Main1
 
 }}}
