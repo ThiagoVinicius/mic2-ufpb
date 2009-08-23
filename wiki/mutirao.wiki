@@ -88,9 +88,10 @@ ipop3     TOS = MDR; goto Main1
 iGOTO:
 igoto1    OPC = PC - 1
 igoto2    PC = PC + 1; fetch
-igoto3
-igoto4    PC = OPC + MBRU or MBR << 8
-igoto5    goto Main1
+igoto3    H  = MBR << 8
+igoto4    H  = MBRU or H
+igoto5    PC = OPC + H; fetch
+igoto6    goto Main1
 
 iIFEQ:
 iifeq1    MAR = SP = SP - 1; rd
@@ -100,24 +101,27 @@ iifeq4    Z = OPC; if (Z) goto T; else goto F
 
 iINVOKEVIRTUAL:
 iinvokevirtual1    PC = PC + 1; fetch
-iinvokevirtual2    
-iinvokevirtual3    MAR = CPP + MBRU or MBRU << 8
-iinvokevirtual4    OPC = PC + 1
-iinvokevirtual5    PC = MDR; fetch
-iinvokevirtual6    PC = PC + 1; fetch
-iinvokevirtual7    
-iinvokevirtual8    PC = PC + 1; fetch
-iinvokevirtual9    TOS = SP - MBRU or MBRU << 8
-iinvokevirtual10   TOS = MAR = TOS + 1
-iinvokevirtual11   PC = PC + 1; fetch
-iinvokevirtual12   
-iinvokevirtual13   MDR + SP + MBRU or MBRU + 1; wr
-iinvokevirtual14   MAR = SP = MDR; 
-iinvokevirtual15   MDR = OPC; wr 
-iinvokevirtual16   MAR = SP = SP + 1 
-iinvokevirtual17   MDR = LV; wr 
-iinvokevirtual18   PC = PC + 1; fetch
-iinvokevirtual19   LV = TOS; goto Main1 
+iinvokevirtual2    H  = MBRU << 8
+iinvokevirtual3    H  = MBRU or H
+iinvokevirtual4    MAR = CPP + H
+iinvokevirtual5    OPC = PC + 1
+iinvokevirtual6    PC = MDR; fetch
+iinvokevirtual7    PC = PC + 1; fetch
+iinvokevirtual8    H  = MBRU << 8
+iinvokevirtual9    H  = MBRU or H
+iinvokevirtual10   PC = PC + 1; fetch
+iinvokevirtual11   TOS = SP - MBRU or MBRU << 8
+iinvokevirtual12   TOS = MAR = TOS + 1
+iinvokevirtual13   PC = PC + 1; fetch
+iinvokevirtual14   H  = MBRU << 8
+iinvokevirtual15   H  = MBRU or H
+iinvokevirtual16   MDR = SP + H + 1; wr
+iinvokevirtual17   MAR = SP = MDR; 
+iinvokevirtual18   MDR = OPC; wr 
+iinvokevirtual19   MAR = SP = SP + 1 
+iinvokevirtual20   MDR = LV; wr 
+iinvokevirtual21   PC = PC + 1; fetch
+iinvokevirtual22   LV = TOS; goto Main1 
 
 iSTORE:
 istore1:   MAR = MBRU + LV
@@ -134,7 +138,7 @@ iif_cmp_eq4   TOS = MDR
 iif_cmp_eq5   Z = OPC - MDR; if (Z) goto T; else goto F
 
 
-iRRETURN:
+iRETURN:
 ireturn1:   MAR = SP = LV; rd
 ireturn2:   
 ireturn3:   LV = MAR = MDR;rd
