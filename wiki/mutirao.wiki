@@ -137,6 +137,16 @@ iif_cmp_eq3   OPC = TOS
 iif_cmp_eq4   TOS = MDR
 iif_cmp_eq5   Z = OPC - MDR; if (Z) goto T; else goto F
 
+T:
+t1    PC = PC + 1; fetch; goto goto2
+
+F:
+f1    PC = PC + 1
+f2    PC = PC + 1; fetch
+f3    goto Main1
+
+
+
 
 iRETURN:
 ireturn1:   MAR = SP = LV; rd
