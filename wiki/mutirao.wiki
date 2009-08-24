@@ -44,8 +44,8 @@ _e nem digam que eu não fui suficientemente claro_
 Aqui está a escalação:
 
 || Instrução || Responsável || Comentários ||
-||~~iADD~~   || Joedson     ||
-||~~iSUB~~   || Jailton     ||
+||~~iADD~~   || Joedson     || Validada    ||
+||~~iSUB~~   || Jailton     || Validada    ||
 ||  iAND     || Amanda      ||
 ||~~iOR~~    || Gabriela    ||
 ||~~iDUP~~   || Joedson     ||
@@ -56,10 +56,10 @@ Aqui está a escalação:
 || ~~iSTORE~~|| Diénert     ||
 || ~~iWIDE~~ || nobody      ||   instrução abolida! ||
 ||  iINC     || Hugo        ||
-|| ~~iGOTO~~ || Gutenberg   ||
+|| ~~iGOTO~~ || Gutenberg   || Validada    ||
 ||  iFLT     || Hugo        ||
 || ~~iIFEQ~~ || Gutenberg   ||
-||~~iIF_CMP_EQ~~|| Diénert     || cuidado nessa linha envolve as microinstruções T e F!! ||
+||~~iIF_CMP_EQ~~|| Diénert     || Validada    ||
 || ~~iINVOKEVIRTUAL~~ || Gutenberg ||
 || ~~iRETURN~~ || Diénert     ||
 
