@@ -164,9 +164,9 @@ ior2   goto ior3
 ior3   MDR = TOS = MDR OR TOS; wr; goto Main1
 
 iLOAD:
-iload1   MAR = MBRU + LV; rd; goto iload3
-iload2   MAR = SP = SP + 1; goto iload4
-iload3   PC = PC + 1; fetch; wr; goto iload5
+iload1   MAR = MBRU + LV; rd; goto iload2
+iload2   MAR = SP = SP + 1; goto iload3
+iload3   PC = PC + 1; fetch; wr; goto iload4
 iload4   TOS = MDR; goto Main1
 
 }}}
