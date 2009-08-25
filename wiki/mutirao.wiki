@@ -43,11 +43,11 @@ _e nem digam que eu não fui suficientemente claro_
 
 Aqui está a escalação:
 
-|| Instrução || Responsável || Comentários ||
+|| Instrução || Responsável || Comentários || Comentários... dos comentários ||
 ||~~iADD~~   || Joedson     || Validada    ||
 ||~~iSUB~~   || Jailton     || Validada    ||
-||  iAND     || Amanda      ||
-||~~iOR~~    || Gabriela    ||
+||  iAND     || Amanda      || Validada    || -- como assim?! ||
+||~~iOR~~    || Gabriela    || Validada    || 
 ||~~iDUP~~   || Joedson     ||
 ||~~iPOP~~   || Jailton     ||
 ||  iSWAP    || Hugo        ||
