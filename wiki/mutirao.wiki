@@ -62,6 +62,8 @@ Aqui está a escalação:
 ||~~iIF_CMP_EQ~~|| Diénert     || Validada    ||
 || ~~iINVOKEVIRTUAL~~ || Gutenberg ||
 || ~~iRETURN~~ || Diénert     ||
+|| ~~iNOP~~  || Thiago     || VALIDADA || meu desejo foi realizado. ||
+|| ~~iMUL2~~ || João       || VALIDADA || Essa aqui multiplica por 2||
 
 Coloquem aqui abaixo, os códigos "alto nível", por favor, não quero ver zeros e uns. Não aqui.
 
@@ -168,5 +170,12 @@ iload1   MAR = MBRU + LV; rd; goto iload2
 iload2   MAR = SP = SP + 1; goto iload3
 iload3   PC = PC + 1; fetch; wr; goto iload4
 iload4   TOS = MDR; goto Main1
+
+iNOP:
+inop1    goto Main1;
+
+iMUL2:
+imul2_1    mar = sp
+imul2_2    tos = mdr = tos << 1; wr; goto Main1
 
 }}}
