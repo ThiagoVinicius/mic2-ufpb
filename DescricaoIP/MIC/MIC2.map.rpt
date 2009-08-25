@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIC2
-Fri Jun 05 11:58:36 2009
+Mon Aug 24 21:35:56 2009
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
 
 
@@ -14,13 +14,12 @@ Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. Analysis & Synthesis RAM Summary
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for ROM:inst3|altsyncram:altsyncram_component|altsyncram_mt71:auto_generated
- 14. Parameter Settings for User Entity Instance: ROM:inst3|altsyncram:altsyncram_component
- 15. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for ROM:inst3|altsyncram:altsyncram_component|altsyncram_mt71:auto_generated
+ 13. Parameter Settings for User Entity Instance: ROM:inst3|altsyncram:altsyncram_component
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +45,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                            ;
 +-------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Jun 05 11:58:35 2009   ;
+; Analysis & Synthesis Status   ; Successful - Mon Aug 24 21:35:56 2009   ;
 ; Quartus II Version            ; 8.0 Build 215 05/29/2008 SJ Web Edition ;
 ; Revision Name                 ; MIC2                                    ;
 ; Top-level Entity Name         ; MIC2                                    ;
 ; Family                        ; Stratix II                              ;
 ; Logic utilization             ; N/A                                     ;
-;     Combinational ALUTs       ; 1,162                                   ;
+;     Combinational ALUTs       ; 1,167                                   ;
 ;     Dedicated logic registers ; 1,434                                   ;
 ; Total registers               ; 1434                                    ;
 ; Total pins                    ; 307                                     ;
@@ -139,39 +138,39 @@ applicable agreement for further details.
 +--------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+
-; ALU.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/ALU.sv                 ;
-; CONTROLEMIC.sv                   ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/CONTROLEMIC.sv         ;
-; DATA_PATH.bdf                    ; yes             ; User Block Diagram/Schematic File  ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/DATA_PATH.bdf          ;
-; DecodificadorA.sv                ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/DecodificadorA.sv      ;
-; DecodificadorB.sv                ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/DecodificadorB.sv      ;
-; Deslocador.sv                    ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/Deslocador.sv          ;
-; FETCH_MEM.sv                     ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/FETCH_MEM.sv           ;
-; MAR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MAR.sv                 ;
-; MBR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MBR.sv                 ;
-; MDR.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MDR.sv                 ;
-; PC.sv                            ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/PC.sv                  ;
-; RAM.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/RAM.sv                 ;
-; Registrador.sv                   ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/Registrador.sv         ;
-; ROM.sv                           ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/ROM.sv                 ;
-; SelectMem.sv                     ; yes             ; User File                          ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/SelectMem.sv           ;
-; MIC2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/MIC2.bdf               ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altsyncram.tdf               ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/stratix_ram_block.inc        ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.inc                  ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_decode.inc               ;
-; aglobal80.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/aglobal80.inc                ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/a_rdenreg.inc                ;
-; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altrom.inc                   ;
-; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altram.inc                   ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altdpram.inc                 ;
-; altqpram.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altqpram.inc                 ;
-; db/altsyncram_mt71.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Pessoal/ufpb/P5/Arquitetura/svn/DescricaoIP/MIC/db/altsyncram_mt71.tdf ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
+; ALU.sv                           ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/ALU.sv                    ;
+; CONTROLEMIC.sv                   ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/CONTROLEMIC.sv            ;
+; DATA_PATH.bdf                    ; yes             ; User Block Diagram/Schematic File  ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/DATA_PATH.bdf             ;
+; DecodificadorA.sv                ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/DecodificadorA.sv         ;
+; DecodificadorB.sv                ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/DecodificadorB.sv         ;
+; Deslocador.sv                    ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/Deslocador.sv             ;
+; FETCH_MEM.sv                     ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/FETCH_MEM.sv              ;
+; MAR.sv                           ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MAR.sv                    ;
+; MBR.sv                           ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MBR.sv                    ;
+; MDR.sv                           ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MDR.sv                    ;
+; PC.sv                            ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/PC.sv                     ;
+; RAM.sv                           ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/RAM.sv                    ;
+; Registrador.sv                   ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/Registrador.sv            ;
+; ROM.sv                           ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/ROM.sv                    ;
+; SelectMem.sv                     ; yes             ; User File                          ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/SelectMem.sv              ;
+; MIC2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MIC2.bdf                  ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/altsyncram.tdf        ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/stratix_ram_block.inc ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/lpm_mux.inc           ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/lpm_decode.inc        ;
+; aglobal80.inc                    ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/aglobal80.inc         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/a_rdenreg.inc         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/altrom.inc            ;
+; altram.inc                       ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/altram.inc            ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/altdpram.inc          ;
+; altqpram.inc                     ; yes             ; Megafunction                       ; d:/altera/80/quartus/libraries/megafunctions/altqpram.inc          ;
+; db/altsyncram_mt71.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/db/altsyncram_mt71.tdf    ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -179,39 +178,39 @@ applicable agreement for further details.
 +-----------------------------------------------+-------+
 ; Resource                                      ; Usage ;
 +-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 1162  ;
+; Estimated ALUTs Used                          ; 1167  ;
 ; Dedicated logic registers                     ; 1434  ;
 ;                                               ;       ;
-; Estimated ALUTs Unavailable                   ; 536   ;
+; Estimated ALUTs Unavailable                   ; 535   ;
 ;                                               ;       ;
-; Total combinational functions                 ; 1162  ;
+; Total combinational functions                 ; 1167  ;
 ; Combinational ALUT usage by number of inputs  ;       ;
 ;     -- 7 input functions                      ; 0     ;
-;     -- 6 input functions                      ; 446   ;
-;     -- 5 input functions                      ; 447   ;
-;     -- 4 input functions                      ; 71    ;
-;     -- <=3 input functions                    ; 198   ;
+;     -- 6 input functions                      ; 521   ;
+;     -- 5 input functions                      ; 353   ;
+;     -- 4 input functions                      ; 58    ;
+;     -- <=3 input functions                    ; 235   ;
 ;                                               ;       ;
 ; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 1097  ;
+;     -- normal mode                            ; 1102  ;
 ;     -- extended LUT mode                      ; 0     ;
 ;     -- arithmetic mode                        ; 65    ;
 ;     -- shared arithmetic mode                 ; 0     ;
 ;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 1698  ;
+; Estimated ALUT/register pairs used            ; 1702  ;
 ;                                               ;       ;
 ; Total registers                               ; 1434  ;
 ;     -- Dedicated logic registers              ; 1434  ;
 ;     -- I/O registers                          ; 0     ;
 ;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 849   ;
+; Estimated ALMs:  partially or completely used ; 851   ;
 ;                                               ;       ;
 ; I/O pins                                      ; 307   ;
 ; Total block memory bits                       ; 19968 ;
 ; Maximum fan-out node                          ; clk   ;
 ; Maximum fan-out                               ; 1473  ;
-; Total fan-out                                 ; 10831 ;
-; Average fan-out                               ; 3.68  ;
+; Total fan-out                                 ; 10869 ;
+; Average fan-out                               ; 3.69  ;
 +-----------------------------------------------+-------+
 
 
@@ -220,24 +219,24 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
-; |MIC2                                     ; 1162 (0)          ; 1434 (0)     ; 19968             ; 0            ; 0       ; 0         ; 0         ; 307  ; 0            ; |MIC2                                                                          ; work         ;
-;    |CONTROLEMIC:CONTROLMIC|               ; 8 (8)             ; 2 (2)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|CONTROLEMIC:CONTROLMIC                                                   ; work         ;
-;    |DATA_PATH:DP|                         ; 731 (0)           ; 297 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP                                                             ; work         ;
-;       |ALU:ULA|                           ; 251 (251)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|ALU:ULA                                                     ; work         ;
-;       |DecodificadorA:DecA|               ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|DecodificadorA:DecA                                         ; work         ;
+; |MIC2                                     ; 1167 (0)          ; 1434 (0)     ; 19968             ; 0            ; 0       ; 0         ; 0         ; 307  ; 0            ; |MIC2                                                                          ; work         ;
+;    |CONTROLEMIC:CONTROLMIC|               ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|CONTROLEMIC:CONTROLMIC                                                   ; work         ;
+;    |DATA_PATH:DP|                         ; 728 (0)           ; 298 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP                                                             ; work         ;
+;       |ALU:ULA|                           ; 254 (254)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|ALU:ULA                                                     ; work         ;
+;       |DecodificadorA:DecA|               ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|DecodificadorA:DecA                                         ; work         ;
 ;       |Deslocador:DESLOC|                 ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Deslocador:DESLOC                                           ; work         ;
 ;       |MAR:inst|                          ; 1 (1)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|MAR:inst                                                    ; work         ;
-;       |MBR:mbr|                           ; 2 (2)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|MBR:mbr                                                     ; work         ;
-;       |MDR:mdr|                           ; 204 (204)         ; 33 (33)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|MDR:mdr                                                     ; work         ;
-;       |PC:pc|                             ; 197 (197)         ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|PC:pc                                                       ; work         ;
+;       |MBR:mbr|                           ; 3 (3)             ; 9 (9)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|MBR:mbr                                                     ; work         ;
+;       |MDR:mdr|                           ; 199 (199)         ; 33 (33)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|MDR:mdr                                                     ; work         ;
+;       |PC:pc|                             ; 193 (193)         ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|PC:pc                                                       ; work         ;
 ;       |Registrador:CPP|                   ; 1 (1)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Registrador:CPP                                             ; work         ;
 ;       |Registrador:H|                     ; 33 (33)           ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Registrador:H                                               ; work         ;
 ;       |Registrador:LV|                    ; 1 (1)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Registrador:LV                                              ; work         ;
-;       |Registrador:OPC|                   ; 1 (1)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Registrador:OPC                                             ; work         ;
+;       |Registrador:OPC|                   ; 2 (2)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Registrador:OPC                                             ; work         ;
 ;       |Registrador:SP|                    ; 1 (1)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Registrador:SP                                              ; work         ;
 ;       |Registrador:TOS|                   ; 1 (1)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|DATA_PATH:DP|Registrador:TOS                                             ; work         ;
-;    |FETCH_MEM:inst4|                      ; 15 (15)           ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|FETCH_MEM:inst4                                                          ; work         ;
-;    |RAM:inst5|                            ; 407 (407)         ; 1089 (1089)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|RAM:inst5                                                                ; work         ;
+;    |FETCH_MEM:inst4|                      ; 17 (17)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|FETCH_MEM:inst4                                                          ; work         ;
+;    |RAM:inst5|                            ; 409 (409)         ; 1089 (1089)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|RAM:inst5                                                                ; work         ;
 ;    |ROM:inst3|                            ; 1 (1)             ; 39 (39)      ; 19968             ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|ROM:inst3                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 19968             ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|ROM:inst3|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_mt71:auto_generated| ; 0 (0)             ; 0 (0)        ; 19968             ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MIC2|ROM:inst3|altsyncram:altsyncram_component|altsyncram_mt71:auto_generated ; work         ;
@@ -254,56 +253,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; RAM:inst5|Reg_Int[1]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[2]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[3]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[4]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[5]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[6]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[7]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[8]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[9]~en                ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[10]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[11]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[12]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[13]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[14]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[15]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[16]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[17]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[18]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[19]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[20]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[21]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[22]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[23]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[24]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[25]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[26]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[27]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[28]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[29]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[30]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; RAM:inst5|Reg_Int[31]~en               ; Merged with RAM:inst5|Reg_Int[0]~en    ;
-; FETCH_MEM:inst4|Reg_int_f[7]           ; Stuck at GND due to stuck port data_in ;
-; DATA_PATH:DP|MBR:mbr|MBR_Reg[7]        ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 33 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                       ;
-+------------------------------+---------------------------+----------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register ;
-+------------------------------+---------------------------+----------------------------------------+
-; FETCH_MEM:inst4|Reg_int_f[7] ; Stuck at GND              ; DATA_PATH:DP|MBR:mbr|MBR_Reg[7]        ;
-;                              ; due to stuck port data_in ;                                        ;
-+------------------------------+---------------------------+----------------------------------------+
++------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                           ;
++----------------------------------------+-------------------------------------+
+; Register name                          ; Reason for Removal                  ;
++----------------------------------------+-------------------------------------+
+; RAM:inst5|Reg_Int[1]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[2]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[3]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[4]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[5]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[6]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[7]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[8]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[9]~en                ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[10]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[11]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[12]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[13]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[14]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[15]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[16]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[17]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[18]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[19]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[20]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[21]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[22]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[23]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[24]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[25]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[26]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[27]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[28]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[29]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[30]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; RAM:inst5|Reg_Int[31]~en               ; Merged with RAM:inst5|Reg_Int[0]~en ;
+; Total Number of Removed Registers = 31 ;                                     ;
++----------------------------------------+-------------------------------------+
 
 
 +------------------------------------------------------+
@@ -312,56 +299,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 1434  ;
-; Number of registers using Synchronous Clear  ; 112   ;
+; Number of registers using Synchronous Clear  ; 113   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1366  ;
+; Number of registers using Clock Enable       ; 1368  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; RAM:inst5|memoria_Int[21][6]           ; 1       ;
-; RAM:inst5|memoria_Int[23][6]           ; 1       ;
-; RAM:inst5|memoria_Int[21][5]           ; 1       ;
-; RAM:inst5|memoria_Int[23][5]           ; 1       ;
-; RAM:inst5|memoria_Int[21][2]           ; 1       ;
-; RAM:inst5|memoria_Int[23][2]           ; 1       ;
-; RAM:inst5|memoria_Int[29][1]           ; 1       ;
-; RAM:inst5|memoria_Int[30][1]           ; 1       ;
-; RAM:inst5|memoria_Int[30][0]           ; 1       ;
-; Total number of inverted registers = 9 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; RAM:inst5|memoria_Int[21][6]            ; 1       ;
+; RAM:inst5|memoria_Int[23][6]            ; 1       ;
+; RAM:inst5|memoria_Int[21][5]            ; 1       ;
+; RAM:inst5|memoria_Int[23][5]            ; 1       ;
+; RAM:inst5|memoria_Int[21][2]            ; 1       ;
+; RAM:inst5|memoria_Int[23][2]            ; 1       ;
+; RAM:inst5|memoria_Int[30][2]            ; 1       ;
+; RAM:inst5|memoria_Int[29][1]            ; 1       ;
+; RAM:inst5|memoria_Int[23][0]            ; 1       ;
+; RAM:inst5|memoria_Int[29][0]            ; 1       ;
+; RAM:inst5|memoria_Int[30][0]            ; 1       ;
+; Total number of inverted registers = 11 ;         ;
++-----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |MIC2|DATA_PATH:DP|MAR:inst|outMemPrinc[26]    ;
-; 3:1                ; 39 bits   ; 78 ALUTs      ; 0 ALUTs              ; 78 ALUTs               ; Yes        ; |MIC2|ROM:inst3|NEXT_INSTRUCT[2]               ;
-; 16:1               ; 7 bits    ; 70 ALUTs      ; 56 ALUTs             ; 14 ALUTs               ; Yes        ; |MIC2|FETCH_MEM:inst4|Reg_int_f[6]             ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|PC:pc|guarda[8]             ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:SP|guarda[2]    ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:LV|guarda[4]    ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:CPP|guarda[16]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:TOS|guarda[10]  ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:OPC|guarda[4]   ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:H|guarda[14]    ;
-; 3:1                ; 7 bits    ; 14 ALUTs      ; 14 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|MBR:mbr|MBR_Reg[1]          ;
-; 4:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|MDR:mdr|guarda[6]           ;
-; 33:1               ; 32 bits   ; 704 ALUTs     ; 704 ALUTs            ; 0 ALUTs                ; Yes        ; |MIC2|RAM:inst5|Reg_Int[13]                    ;
-; 3:1                ; 23 bits   ; 46 ALUTs      ; 46 ALUTs             ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|Deslocador:DESLOC|Selector1 ;
-; 20:1               ; 31 bits   ; 403 ALUTs     ; 403 ALUTs            ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|ALU:ULA|R[19]               ;
-; 6:1                ; 32 bits   ; 128 ALUTs     ; 128 ALUTs            ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|ALU:ULA|Add1                ;
-; 6:1                ; 32 bits   ; 128 ALUTs     ; 64 ALUTs             ; 64 ALUTs               ; No         ; |MIC2|DATA_PATH:DP|ALU:ULA|Add1                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |MIC2|DATA_PATH:DP|MAR:inst|outMemPrinc[26]   ;
+; 3:1                ; 39 bits   ; 78 ALUTs      ; 0 ALUTs              ; 78 ALUTs               ; Yes        ; |MIC2|ROM:inst3|NEXT_INSTRUCT[38]             ;
+; 36:1               ; 8 bits    ; 192 ALUTs     ; 168 ALUTs            ; 24 ALUTs               ; Yes        ; |MIC2|FETCH_MEM:inst4|Reg_int_f[5]            ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|PC:pc|guarda[7]            ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:SP|guarda[27]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:LV|guarda[5]   ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:CPP|guarda[20] ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:TOS|guarda[5]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:OPC|guarda[2]  ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|Registrador:H|guarda[23]   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|MBR:mbr|MBR_Reg[3]         ;
+; 4:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; Yes        ; |MIC2|DATA_PATH:DP|MDR:mdr|guarda[25]         ;
+; 33:1               ; 32 bits   ; 704 ALUTs     ; 704 ALUTs            ; 0 ALUTs                ; Yes        ; |MIC2|RAM:inst5|Reg_Int[9]                    ;
+; 4:1                ; 6 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|Deslocador:DESLOC|Mux24    ;
+; 4:1                ; 23 bits   ; 46 ALUTs      ; 46 ALUTs             ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|Deslocador:DESLOC|Mux18    ;
+; 20:1               ; 31 bits   ; 403 ALUTs     ; 403 ALUTs            ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|ALU:ULA|R[9]               ;
+; 4:1                ; 31 bits   ; 62 ALUTs      ; 62 ALUTs             ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|ALU:ULA|Add1               ;
+; 4:1                ; 31 bits   ; 62 ALUTs      ; 62 ALUTs             ; 0 ALUTs                ; No         ; |MIC2|DATA_PATH:DP|ALU:ULA|Add1               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -438,7 +428,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.0 Build 215 05/29/2008 SJ Web Edition
-    Info: Processing started: Fri Jun 05 11:58:00 2009
+    Info: Processing started: Mon Aug 24 21:35:09 2009
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIC2 -c MIC2
 Info: Found 1 design units, including 1 entities, in source file ALU.sv
     Info: Found entity 1: ALU
@@ -476,8 +466,7 @@ Info: Found 1 design units, including 1 entities, in source file MIC2.bdf
     Info: Found entity 1: MIC2
 Info: Found 1 design units, including 1 entities, in source file lpm_rom0.v
     Info: Found entity 1: lpm_rom0
-Info: Found 1 design units, including 1 entities, in source file lpm_rom1.v
-    Info: Found entity 1: lpm_rom1
+Warning: Can't analyze file -- file D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/lpm_rom1.v is missing
 Info: Elaborating entity "MIC2" for the top level hierarchy
 Info: Elaborating entity "SelectMem" for hierarchy "SelectMem:inst"
 Info: Elaborating entity "ROM" for hierarchy "ROM:inst3"
@@ -501,13 +490,14 @@ Info: Found 1 design units, including 1 entities, in source file db/altsyncram_m
     Info: Found entity 1: altsyncram_mt71
 Info: Elaborating entity "altsyncram_mt71" for hierarchy "ROM:inst3|altsyncram:altsyncram_component|altsyncram_mt71:auto_generated"
 Info: Elaborating entity "CONTROLEMIC" for hierarchy "CONTROLEMIC:CONTROLMIC"
+Warning (10036): Verilog HDL or VHDL warning at CONTROLEMIC.sv(27): object "reg_Z" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at CONTROLEMIC.sv(28): object "reg_N" assigned a value but never read
 Info: Elaborating entity "DATA_PATH" for hierarchy "DATA_PATH:DP"
 Info: Elaborating entity "ALU" for hierarchy "DATA_PATH:DP|ALU:ULA"
 Info: Elaborating entity "Registrador" for hierarchy "DATA_PATH:DP|Registrador:H"
 Info: Elaborating entity "DecodificadorA" for hierarchy "DATA_PATH:DP|DecodificadorA:DecA"
 Info: Elaborating entity "DecodificadorB" for hierarchy "DATA_PATH:DP|DecodificadorB:DECB"
 Info: Elaborating entity "Deslocador" for hierarchy "DATA_PATH:DP|Deslocador:DESLOC"
-Info (10264): Verilog HDL Case Statement information at Deslocador.sv(24): all case item expressions in this case statement are onehot
 Info: Elaborating entity "MBR" for hierarchy "DATA_PATH:DP|MBR:mbr"
 Info: Elaborating entity "MDR" for hierarchy "DATA_PATH:DP|MDR:mdr"
 Info: Elaborating entity "PC" for hierarchy "DATA_PATH:DP|PC:pc"
@@ -546,8 +536,6 @@ Info: Duplicate registers merged to single register
     Info (13350): Duplicate register "RAM:inst5|Reg_Int[29]~en" merged to single register "RAM:inst5|Reg_Int[0]~en"
     Info (13350): Duplicate register "RAM:inst5|Reg_Int[30]~en" merged to single register "RAM:inst5|Reg_Int[0]~en"
     Info (13350): Duplicate register "RAM:inst5|Reg_Int[31]~en" merged to single register "RAM:inst5|Reg_Int[0]~en"
-Warning (14130): Reduced register "FETCH_MEM:inst4|Reg_int_f[7]" with stuck data_in port to stuck value GND
-Warning (14130): Reduced register "DATA_PATH:DP|MBR:mbr|MBR_Reg[7]" with stuck data_in port to stuck value GND
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "RAM:inst5|out_RAM[31]" to the node "DATA_PATH:DP|MDR:mdr|guarda" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "RAM:inst5|out_RAM[30]" to the node "DATA_PATH:DP|MDR:mdr|guarda" into an OR gate
@@ -582,82 +570,79 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "RAM:inst5|out_RAM[1]" to the node "DATA_PATH:DP|MDR:mdr|guarda" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "RAM:inst5|out_RAM[0]" to the node "DATA_PATH:DP|MDR:mdr|guarda" into an OR gate
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[0]" to the node "DATA_PATH:DP|ALU:ULA|Mux31" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[0]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[1]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[1]" to the node "DATA_PATH:DP|ALU:ULA|R[1]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[2]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[2]" to the node "DATA_PATH:DP|ALU:ULA|R[2]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[3]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[3]" to the node "DATA_PATH:DP|ALU:ULA|R[3]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[4]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[4]" to the node "DATA_PATH:DP|ALU:ULA|R[4]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[5]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[5]" to the node "DATA_PATH:DP|ALU:ULA|R[5]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[6]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[6]" to the node "DATA_PATH:DP|ALU:ULA|R[6]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[7]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[7]" to the node "DATA_PATH:DP|ALU:ULA|R[7]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[8]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[8]" to the node "DATA_PATH:DP|ALU:ULA|R[8]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[9]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[9]" to the node "DATA_PATH:DP|ALU:ULA|R[9]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[10]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[10]" to the node "DATA_PATH:DP|ALU:ULA|R[10]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[11]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[11]" to the node "DATA_PATH:DP|ALU:ULA|R[11]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[12]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[12]" to the node "DATA_PATH:DP|ALU:ULA|R[12]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[13]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[13]" to the node "DATA_PATH:DP|ALU:ULA|R[13]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[14]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[14]" to the node "DATA_PATH:DP|ALU:ULA|R[14]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[15]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[15]" to the node "DATA_PATH:DP|ALU:ULA|R[15]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[16]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[16]" to the node "DATA_PATH:DP|ALU:ULA|R[16]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[17]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[17]" to the node "DATA_PATH:DP|ALU:ULA|R[17]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[18]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[18]" to the node "DATA_PATH:DP|ALU:ULA|R[18]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[19]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[19]" to the node "DATA_PATH:DP|ALU:ULA|R[19]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[20]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[20]" to the node "DATA_PATH:DP|ALU:ULA|R[20]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[21]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[21]" to the node "DATA_PATH:DP|ALU:ULA|R[21]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[22]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[22]" to the node "DATA_PATH:DP|ALU:ULA|R[22]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[23]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[23]" to the node "DATA_PATH:DP|ALU:ULA|R[23]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[24]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[24]" to the node "DATA_PATH:DP|ALU:ULA|R[24]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[25]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[25]" to the node "DATA_PATH:DP|ALU:ULA|R[25]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[26]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[26]" to the node "DATA_PATH:DP|ALU:ULA|R[26]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[27]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[27]" to the node "DATA_PATH:DP|ALU:ULA|R[27]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[28]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[28]" to the node "DATA_PATH:DP|ALU:ULA|R[28]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[29]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[29]" to the node "DATA_PATH:DP|ALU:ULA|R[29]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[30]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[30]" to the node "DATA_PATH:DP|ALU:ULA|R[30]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[31]" to the node "DATA_PATH:DP|ALU:ULA|Add1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[31]" to the node "DATA_PATH:DP|ALU:ULA|N" into an OR gate
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "MBR2MPC[7]" is stuck at GND
-    Warning (13410): Pin "out_MBR[7]" is stuck at GND
-Info: Implemented 2829 device resources after synthesis - the final resource count might be different
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[0]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[0]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[1]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[1]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[2]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[2]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[3]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[3]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[4]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[4]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[5]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[5]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[6]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[6]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[7]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[7]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[8]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[8]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[9]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[9]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[10]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[10]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[11]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[11]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[12]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[12]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[13]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[13]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[14]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[14]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[15]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[15]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[16]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[16]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[17]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[17]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[18]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[18]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[19]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[19]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[20]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[20]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[21]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[21]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[22]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[22]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[23]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[23]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[24]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[24]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[25]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[25]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[26]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[26]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[27]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[27]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[28]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[28]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[29]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[29]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[30]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[30]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|MDR:mdr|A[31]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "DATA_PATH:DP|PC:pc|B[31]" to the node "DATA_PATH:DP|ALU:ULA|R" into an OR gate
+Info: Implemented 2831 device resources after synthesis - the final resource count might be different
     Info: Implemented 3 input pins
     Info: Implemented 304 output pins
-    Info: Implemented 2483 logic cells
+    Info: Implemented 2485 logic cells
     Info: Implemented 39 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 103 warnings
-    Info: Peak virtual memory: 205 megabytes
-    Info: Processing ended: Fri Jun 05 11:58:36 2009
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 213 megabytes
+    Info: Processing ended: Mon Aug 24 21:35:56 2009
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:00:39
 
 

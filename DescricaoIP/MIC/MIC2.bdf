@@ -319,7 +319,7 @@ applicable agreement for further details.
 	(output)
 	(rect 2568 1336 2744 1352)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
-	(text "q1[38..0]" (rect 5 0 48 12)(font "Arial" ))
+	(text "q1[38..0]" (rect 43 0 86 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8)(line_width 1))
@@ -334,7 +334,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 3584 1392 3760 1408)
+	(rect 2920 1728 3096 1744)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Out_PC[31..0]" (rect 90 0 160 12)(font "Arial" ))
 	(pt 0 8)
@@ -439,49 +439,6 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 112 80)(line_width 1))
-	)
-)
-(symbol
-	(rect 2616 1688 2824 1816)
-	(text "FETCH_MEM" (rect 5 0 71 12)(font "Arial" ))
-	(text "inst4" (rect 8 112 31 124)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "PC_M[31..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "PC_M[31..0]" (rect 21 27 82 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "Fetch" (rect 0 0 28 12)(font "Arial" ))
-		(text "Fetch" (rect 21 43 49 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 1))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk_fecth" (rect 0 0 46 12)(font "Arial" ))
-		(text "clk_fecth" (rect 21 59 67 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 1))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "reset_mem_fecth" (rect 0 0 87 12)(font "Arial" ))
-		(text "reset_mem_fecth" (rect 21 75 108 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "out_MBR[7..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "out_MBR[7..0]" (rect 117 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 192 112)(line_width 1))
 	)
 )
 (symbol
@@ -900,6 +857,56 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 176 304)(line_width 1))
 	)
 )
+(symbol
+	(rect 2616 1688 2840 1816)
+	(text "FETCH_MEM" (rect 5 0 71 12)(font "Arial" ))
+	(text "inst4" (rect 8 112 31 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "PC_M[31..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "PC_M[31..0]" (rect 21 27 82 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Fetch" (rect 0 0 28 12)(font "Arial" ))
+		(text "Fetch" (rect 21 43 49 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk_fecth" (rect 0 0 46 12)(font "Arial" ))
+		(text "clk_fecth" (rect 21 59 67 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "reset_mem_fecth" (rect 0 0 87 12)(font "Arial" ))
+		(text "reset_mem_fecth" (rect 21 75 108 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "out_MBR[7..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "out_MBR[7..0]" (rect 133 27 203 39)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "debug_PC[31..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "debug_PC[31..0]" (rect 121 43 203 55)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 112)(line_width 1))
+	)
+)
 (connector
 	(pt 3464 1104)
 	(pt 3776 1104)
@@ -989,11 +996,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 3552 1960)
-	(pt 2392 1960)
-	(bus)
-)
-(connector
 	(pt 2616 1720)
 	(pt 2392 1720)
 	(bus)
@@ -1001,11 +1003,6 @@ applicable agreement for further details.
 (connector
 	(pt 2392 1720)
 	(pt 2392 1960)
-	(bus)
-)
-(connector
-	(pt 2824 1720)
-	(pt 3112 1720)
 	(bus)
 )
 (connector
@@ -1305,8 +1302,77 @@ applicable agreement for further details.
 	(pt 2832 1248)
 )
 (connector
+	(pt 2880 1504)
+	(pt 2848 1504)
+	(bus)
+)
+(connector
+	(pt 2848 1264)
+	(pt 2848 1504)
+	(bus)
+)
+(connector
+	(pt 2848 1264)
+	(pt 2832 1264)
+	(bus)
+)
+(connector
+	(pt 2832 1280)
+	(pt 2840 1280)
+	(bus)
+)
+(connector
+	(pt 2840 1280)
+	(pt 2840 1344)
+	(bus)
+)
+(connector
+	(pt 2744 1344)
+	(pt 2840 1344)
+	(bus)
+)
+(connector
+	(pt 2640 1024)
+	(pt 2544 1024)
+	(bus)
+)
+(connector
+	(pt 2640 1040)
+	(pt 2512 1040)
+)
+(connector
+	(pt 2640 1056)
+	(pt 2464 1056)
+)
+(connector
+	(pt 2632 1072)
+	(pt 2640 1072)
+)
+(connector
+	(pt 2544 824)
+	(pt 2544 1024)
+	(bus)
+)
+(connector
+	(pt 2512 728)
+	(pt 2512 1040)
+)
+(connector
+	(pt 3552 1072)
+	(pt 3552 1960)
+	(bus)
+)
+(connector
 	(pt 2488 728)
 	(pt 2512 728)
+)
+(connector
+	(pt 2512 728)
+	(pt 2616 728)
+)
+(connector
+	(pt 2616 728)
+	(pt 2984 728)
 )
 (connector
 	(pt 2984 728)
@@ -1405,82 +1471,18 @@ applicable agreement for further details.
 	(pt 3144 1664)
 )
 (connector
-	(pt 2880 1504)
-	(pt 2848 1504)
-	(bus)
-)
-(connector
-	(pt 2848 1264)
-	(pt 2848 1504)
-	(bus)
-)
-(connector
-	(pt 2848 1264)
-	(pt 2832 1264)
-	(bus)
-)
-(connector
-	(pt 2832 1280)
-	(pt 2840 1280)
-	(bus)
-)
-(connector
-	(pt 2840 1280)
-	(pt 2840 1344)
-	(bus)
-)
-(connector
-	(pt 2744 1344)
-	(pt 2840 1344)
-	(bus)
-)
-(connector
-	(pt 2616 728)
-	(pt 2984 728)
-)
-(connector
-	(pt 2512 728)
-	(pt 2616 728)
-)
-(connector
-	(pt 2640 1024)
-	(pt 2544 1024)
-	(bus)
-)
-(connector
-	(pt 2640 1040)
-	(pt 2512 1040)
-)
-(connector
-	(pt 2640 1056)
-	(pt 2464 1056)
-)
-(connector
-	(pt 2632 1072)
-	(pt 2640 1072)
-)
-(connector
-	(pt 2544 824)
-	(pt 2544 1024)
-	(bus)
-)
-(connector
-	(pt 2512 728)
-	(pt 2512 1040)
-)
-(connector
-	(pt 3584 1400)
-	(pt 3552 1400)
-	(bus)
-)
-(connector
+	(pt 2392 1960)
 	(pt 3552 1960)
-	(pt 3552 1400)
 	(bus)
 )
 (connector
-	(pt 3552 1400)
-	(pt 3552 1072)
+	(pt 2840 1720)
+	(pt 3112 1720)
+	(bus)
+)
+(connector
+	(pt 2840 1736)
+	(pt 2920 1736)
 	(bus)
 )
 (junction (pt 3080 1520))
@@ -1503,4 +1505,4 @@ applicable agreement for further details.
 (junction (pt 3144 1504))
 (junction (pt 3728 1120))
 (junction (pt 2616 728))
-(junction (pt 3552 1400))
+(junction (pt 3112 1720))

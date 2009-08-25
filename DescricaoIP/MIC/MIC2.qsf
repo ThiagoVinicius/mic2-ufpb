@@ -57,3 +57,5 @@ set_global_assignment -name QIP_FILE lpm_rom0.qip
 set_global_assignment -name SIMULATOR_GENERATE_SIGNAL_ACTIVITY_FILE OFF
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE MIC2.vwf
 set_global_assignment -name QIP_FILE lpm_rom1.qip
+set_global_assignment -name CHECK_OUTPUTS OFF
+set_global_assignment -name SETUP_HOLD_DETECTION OFF
