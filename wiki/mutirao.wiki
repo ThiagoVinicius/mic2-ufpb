@@ -48,8 +48,8 @@ Aqui está a escalação:
 ||~~iSUB~~   || Jailton     || Validada    ||
 ||  iAND     || Amanda      || Validada    || -- como assim?! ||
 ||~~iOR~~    || Gabriela    || Validada    || 
-||~~iDUP~~   || Joedson     ||
-||~~iPOP~~   || Jailton     ||
+||~~iDUP~~   || Joedson     || Validada    ||
+||~~iPOP~~   || Jailton     || Validada    ||
 ||  iSWAP    || Hugo        ||
 ||  iBIPUSH  || Amanda      ||
 ||~~iLOAD~~  || Gabriela    ||
