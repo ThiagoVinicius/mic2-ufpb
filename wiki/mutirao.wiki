@@ -62,8 +62,8 @@ Aqui está a escalação:
 ||~~iIF_CMP_EQ~~|| Diénert     || Validada    ||
 || ~~iINVOKEVIRTUAL~~ || Gutenberg ||
 || ~~iRETURN~~ || Diénert     ||
-|| ~~iNOP~~  || Thiago     || VALIDADA || meu desejo foi realizado. ||
-|| ~~iMUL2~~ || João       || VALIDADA || Essa aqui multiplica por 2||
+|| ~~iNOP~~  || Thiago     || Validada || meu desejo foi realizado. ||
+|| ~~iMUL2~~ || João       || Validada || Essa aqui multiplica por 2||
 
 Coloquem aqui abaixo, os códigos "alto nível", por favor, não quero ver zeros e uns. Não aqui.
 
