@@ -6,9 +6,9 @@ word'0 is microinstruction init pc = pc + 1; fetch; goto inst_mbr1
 
 word'1 is microinstruction inst_mbr1 goto inst_mbr2 
 
-word'2 is microinstruction inst_mbr2 jmpc 
+word'2 is microinstruction inst_mbr2 goto main 
 
-word'3 is microinstruction main pc = pc + 1; fetch; goto inst_mbr2
+word'3 is microinstruction main pc = pc + 1; fetch; jmpc 
 
 word'4 is microinstruction inst_157 
 
@@ -22,7 +22,7 @@ word'8 is microinstruction inst_160
 
 word'9 is microinstruction inst_161 
 
-word'10 is microinstruction inst_162 
+word'10 is microinstruction imul2_1 tos = mdr = tos << 1; wr; goto main
 
 word'11 is microinstruction inst_163 
 
@@ -258,7 +258,7 @@ word'126 is microinstruction if_icmpeq6 h-opc; if z goto t else goto f1
 
 word'127 is microinstruction f1 pc = pc + 1 
 
-word'128 is microinstruction f2 pc = pc + 1 
+word'128 is microinstruction f2 pc = pc + 1; fetch 
 
 word'129 is microinstruction f3 goto main 
 
@@ -350,15 +350,15 @@ word'172 is microinstruction inst_156
 
 word'173 is microinstruction lnext1 PC = PC + 1; FETCH 
 
-word'174 is microinstruction lnext2 
+word'174 is microinstruction lnext2 MAR = mbru; rd 
 
-word'175 is microinstruction lnext3 MAR = mbru; rd 
+word'175 is microinstruction lnext3 
 
-word'176 is microinstruction lnext4 pc = pc +1; fetch 
+word'176 is microinstruction lnext4 tos = mdr 
 
-word'177 is microinstruction lnext5 tos = mdr 
+word'177 is microinstruction lnext5 mar = sp = sp + 1; wr; goto main 
 
-word'178 is microinstruction lnext6 mar = sp = sp + 1; wr; goto inst_mbr2 
+word'178 is microinstruction inst_1234 
 
 word'179 is microinstruction inst_179 
 
