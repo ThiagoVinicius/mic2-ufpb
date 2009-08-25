@@ -1,4 +1,4 @@
-Fitter Status : Successful - Fri Jun 05 11:59:08 2009
+Fitter Status : Successful - Mon Aug 24 21:36:36 2009
 Quartus II Version : 8.0 Build 215 05/29/2008 SJ Web Edition
 Revision Name : MIC2
 Top-level Entity Name : MIC2
@@ -6,9 +6,9 @@ Family : Stratix II
 Device : EP2S15F484C3
 Timing Models : Final
 Logic utilization : 16 %
-    Combinational ALUTs : 1,177 / 12,480 ( 9 % )
-    Dedicated logic registers : 1,461 / 12,480 ( 12 % )
-Total registers : 1461
+    Combinational ALUTs : 1,206 / 12,480 ( 10 % )
+    Dedicated logic registers : 1,472 / 12,480 ( 12 % )
+Total registers : 1472
 Total pins : 307 / 343 ( 90 % )
 Total virtual pins : 0
 Total block memory bits : 19,968 / 419,328 ( 5 % )

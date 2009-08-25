@@ -22,6 +22,26 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
+MIC2
+# storage
+db|MIC2.(0).cnf
+db|MIC2.(0).cnf
+# case_insensitive
+# source_file
+MIC2.bdf
+8621d57427911bbe56fe8a71367d8a5
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 SelectMem
 # storage
 db|MIC2.(1).cnf
@@ -100,7 +120,7 @@ db|MIC2.(3).cnf
 db|MIC2.(3).cnf
 # case_insensitive
 # source_file
-c:|altera|80|quartus|libraries|megafunctions|altsyncram.tdf
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|altsyncram.tdf
 9a16746d1bf063b66fd125dd6a53b6d
 6
 # user_parameter {
@@ -371,27 +391,448 @@ address_b
 2
 }
 # include_file {
-c:|altera|80|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
-c:|altera|80|quartus|libraries|megafunctions|aglobal80.inc
-9274497d636e3ed37111b8c54bf938
-c:|altera|80|quartus|libraries|megafunctions|altdpram.inc
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|altdpram.inc
 99d442b5b66c88db4daf94d99c6e4e77
-c:|altera|80|quartus|libraries|megafunctions|altqpram.inc
-74e08939f96a7ea8e7a4d59a5b01fe7
-c:|altera|80|quartus|libraries|megafunctions|altrom.inc
-d4e3a69a331d3a99d3281790d99a1ebd
-c:|altera|80|quartus|libraries|megafunctions|altram.inc
-e66a83eccf6717bed97c99d891ad085
-c:|altera|80|quartus|libraries|megafunctions|a_rdenreg.inc
-60d229340bc3c24acb0a137b4849830
-c:|altera|80|quartus|libraries|megafunctions|stratix_ram_block.inc
-2263a3bdfffeb150af977ee13902f70
-c:|altera|80|quartus|libraries|megafunctions|lpm_mux.inc
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|lpm_mux.inc
 c22bfd353214c01495b560fc34e47d79
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|aglobal80.inc
+9274497d636e3ed37111b8c54bf938
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|altram.inc
+e66a83eccf6717bed97c99d891ad085
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|altrom.inc
+d4e3a69a331d3a99d3281790d99a1ebd
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|stratix_ram_block.inc
+2263a3bdfffeb150af977ee13902f70
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|a_rdenreg.inc
+60d229340bc3c24acb0a137b4849830
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|altqpram.inc
+74e08939f96a7ea8e7a4d59a5b01fe7
+..|..|..|..|..|..|altera|80|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
 }
 # hierarchies {
 ROM:inst3|altsyncram:altsyncram_component
+}
+# macro_sequence
+
+# end
+# entity
+DATA_PATH
+# storage
+db|MIC2.(6).cnf
+db|MIC2.(6).cnf
+# case_insensitive
+# source_file
+DATA_PATH.bdf
+a2d5d08c63709c22f9256f67702d9635
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+DATA_PATH:DP
+}
+# macro_sequence
+
+# end
+# entity
+Registrador
+# storage
+db|MIC2.(8).cnf
+db|MIC2.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Registrador.sv
+afef474f6306f36737a6f35fb95612
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|Registrador:H
+DATA_PATH:DP|Registrador:OPC
+DATA_PATH:DP|Registrador:TOS
+DATA_PATH:DP|Registrador:CPP
+DATA_PATH:DP|Registrador:LV
+DATA_PATH:DP|Registrador:SP
+}
+# macro_sequence
+
+# end
+# entity
+DecodificadorA
+# storage
+db|MIC2.(9).cnf
+db|MIC2.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+DecodificadorA.sv
+9345f4cf95661c66473ac7c54b1968b0
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|DecodificadorA:DecA
+}
+# macro_sequence
+
+# end
+# entity
+DecodificadorB
+# storage
+db|MIC2.(10).cnf
+db|MIC2.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+DecodificadorB.sv
+db56c0204a6c111daee698ab6344b2c5
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|DecodificadorB:DECB
+}
+# macro_sequence
+
+# end
+# entity
+MBR
+# storage
+db|MIC2.(12).cnf
+db|MIC2.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+MBR.sv
+37c766b84244d56eec90e6a31f0fcc7
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|MBR:mbr
+}
+# macro_sequence
+
+# end
+# entity
+MDR
+# storage
+db|MIC2.(13).cnf
+db|MIC2.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+MDR.sv
+1d548a415ff831b7c49c2676ccb4e736
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|MDR:mdr
+}
+# macro_sequence
+
+# end
+# entity
+PC
+# storage
+db|MIC2.(14).cnf
+db|MIC2.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+PC.sv
+a0336a5522bd11e8faa24ed645f162b3
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|PC:pc
+}
+# macro_sequence
+
+# end
+# entity
+MAR
+# storage
+db|MIC2.(15).cnf
+db|MIC2.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+MAR.sv
+7fbfc128a94b9cc7121fff718979
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|MAR:inst
+}
+# macro_sequence
+
+# end
+# entity
+ALU
+# storage
+db|MIC2.(7).cnf
+db|MIC2.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+ALU.sv
+2850d0226bab74e245e1d1960f5b750
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|ALU:ULA
+}
+# macro_sequence
+
+# end
+# entity
+CONTROLEMIC
+# storage
+db|MIC2.(5).cnf
+db|MIC2.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+CONTROLEMIC.sv
+806fd7126fa956163f6e8c2817cd4ab8
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+CONTROLEMIC:CONTROLMIC
+}
+# macro_sequence
+
+# end
+# entity
+RAM
+# storage
+db|MIC2.(17).cnf
+db|MIC2.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+RAM.sv
+bbb5b7e5f5fda21b85bec0759497d0cf
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+RAM:inst5
+}
+# macro_sequence
+
+# end
+# entity
+Deslocador
+# storage
+db|MIC2.(11).cnf
+db|MIC2.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Deslocador.sv
+384deb735d5244bea4c7cb15974213b0
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DATA_PATH:DP|Deslocador:DESLOC
 }
 # macro_sequence
 
@@ -557,431 +998,10 @@ address_a0
 }
 # memory_file {
 memory.mif
-6ab617b9bffe4157ee325482c28797a
+f973d1909f48286d7f5e5cbdd697965
 }
 # hierarchies {
 ROM:inst3|altsyncram:altsyncram_component|altsyncram_mt71:auto_generated
-}
-# macro_sequence
-
-# end
-# entity
-CONTROLEMIC
-# storage
-db|MIC2.(5).cnf
-db|MIC2.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-CONTROLEMIC.sv
-3a936f4d3f2a5ea7310f1f214ce37
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-CONTROLEMIC:CONTROLMIC
-}
-# macro_sequence
-
-# end
-# entity
-DATA_PATH
-# storage
-db|MIC2.(6).cnf
-db|MIC2.(6).cnf
-# case_insensitive
-# source_file
-DATA_PATH.bdf
-a2d5d08c63709c22f9256f67702d9635
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-DATA_PATH:DP
-}
-# macro_sequence
-
-# end
-# entity
-ALU
-# storage
-db|MIC2.(7).cnf
-db|MIC2.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-ALU.sv
-8697e2d9158ae829728236614f9cb0f4
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|ALU:ULA
-}
-# macro_sequence
-
-# end
-# entity
-Registrador
-# storage
-db|MIC2.(8).cnf
-db|MIC2.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Registrador.sv
-afef474f6306f36737a6f35fb95612
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|Registrador:H
-DATA_PATH:DP|Registrador:OPC
-DATA_PATH:DP|Registrador:TOS
-DATA_PATH:DP|Registrador:CPP
-DATA_PATH:DP|Registrador:LV
-DATA_PATH:DP|Registrador:SP
-}
-# macro_sequence
-
-# end
-# entity
-DecodificadorA
-# storage
-db|MIC2.(9).cnf
-db|MIC2.(9).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-DecodificadorA.sv
-9345f4cf95661c66473ac7c54b1968b0
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|DecodificadorA:DecA
-}
-# macro_sequence
-
-# end
-# entity
-DecodificadorB
-# storage
-db|MIC2.(10).cnf
-db|MIC2.(10).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-DecodificadorB.sv
-db56c0204a6c111daee698ab6344b2c5
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|DecodificadorB:DECB
-}
-# macro_sequence
-
-# end
-# entity
-Deslocador
-# storage
-db|MIC2.(11).cnf
-db|MIC2.(11).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-Deslocador.sv
-64468ef213d63618113e964078489c
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|Deslocador:DESLOC
-}
-# macro_sequence
-
-# end
-# entity
-MBR
-# storage
-db|MIC2.(12).cnf
-db|MIC2.(12).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-MBR.sv
-37c766b84244d56eec90e6a31f0fcc7
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|MBR:mbr
-}
-# macro_sequence
-
-# end
-# entity
-MDR
-# storage
-db|MIC2.(13).cnf
-db|MIC2.(13).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-MDR.sv
-1d548a415ff831b7c49c2676ccb4e736
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|MDR:mdr
-}
-# macro_sequence
-
-# end
-# entity
-PC
-# storage
-db|MIC2.(14).cnf
-db|MIC2.(14).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-PC.sv
-a0336a5522bd11e8faa24ed645f162b3
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|PC:pc
-}
-# macro_sequence
-
-# end
-# entity
-MAR
-# storage
-db|MIC2.(15).cnf
-db|MIC2.(15).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-MAR.sv
-7fbfc128a94b9cc7121fff718979
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DATA_PATH:DP|MAR:inst
-}
-# macro_sequence
-
-# end
-# entity
-RAM
-# storage
-db|MIC2.(17).cnf
-db|MIC2.(17).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-RAM.sv
-b083e028c986a0fd5e3b426a4b54df47
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-RAM:inst5
 }
 # macro_sequence
 
@@ -998,7 +1018,7 @@ ON
 # case_sensitive
 # source_file
 FETCH_MEM.sv
-d25c1ff6bdd9a5a0f95c328ed3d45c9e
+1caab9f2bb3b620c6d4e34de3638e49
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1018,26 +1038,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 FETCH_MEM:inst4
-}
-# macro_sequence
-
-# end
-# entity
-MIC2
-# storage
-db|MIC2.(0).cnf
-db|MIC2.(0).cnf
-# case_insensitive
-# source_file
-MIC2.bdf
-424ed6c1dc9e9de29ff7a1b525f3f26
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
 }
 # macro_sequence
 

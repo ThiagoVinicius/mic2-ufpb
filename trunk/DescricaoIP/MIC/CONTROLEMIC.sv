@@ -43,9 +43,9 @@ module CONTROLEMIC(
 			outMPC[8]   =  ADDR[8];
 			outMPC[7:0] =  ADDR[7:0] | inMBR;
 		end else begin /*JNZC*/
-			outMPC[8]   = ( JNZC[1] & reg_Z) | ( JNZC[2] & reg_N) | ADDR[8];
+			outMPC[8]   = ( JNZC[1] & Z) | ( JNZC[2] & N) | ADDR[8];
 			outMPC[7:0] = ADDR[7:0];
 		end/*JNZC*/
-
+		
 	end
 endmodule

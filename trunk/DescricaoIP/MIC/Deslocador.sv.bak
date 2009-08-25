@@ -22,7 +22,7 @@ module Deslocador(	/**/
 		// Statements
 			
 			case(Deslc)
-				1: 		R = E  << 8;/*bitwise left-shift de um byte*/
+				1: 		R = E  << 8;/*bitwise left-shift de um byte. Why?*/
 				2: 		R = E  >>> 1;/*Arithmetic left-shift*/
 				default:R = E;/*10 e demais*/
 			endcase

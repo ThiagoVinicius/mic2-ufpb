@@ -24,6 +24,7 @@ module Deslocador(	/**/
 			case(Deslc)
 				1: 		R = E  << 8;/*bitwise left-shift de um byte. Why?*/
 				2: 		R = E  >>> 1;/*Arithmetic left-shift*/
+				3:      R = E  << 1;
 				default:R = E;/*10 e demais*/
 			endcase
 	end

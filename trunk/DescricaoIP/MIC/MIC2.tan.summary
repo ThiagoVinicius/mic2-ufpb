@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 14.033 ns
+Actual Time    : 13.682 ns
 From           : reset
-To             : DATA_PATH:DP|Registrador:OPC|guarda[25]
+To             : DATA_PATH:DP|Registrador:SP|guarda[29]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 16.429 ns
-From           : ROM:inst3|NEXT_INSTRUCT[12]
+Actual Time    : 15.828 ns
+From           : DATA_PATH:DP|MBR:mbr|MBR_Reg[7]
 To             : Z
 From Clock     : clk
 To Clock       : --
@@ -25,7 +25,7 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 19.415 ns
+Actual Time    : 18.320 ns
 From           : reset
 To             : Z
 From Clock     : --
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -2.679 ns
+Actual Time    : -2.719 ns
 From           : reset
-To             : DATA_PATH:DP|MBR:mbr|MBR_Reg[4]
+To             : DATA_PATH:DP|MAR:inst|outMemPrinc[9]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 45.83 MHz ( period = 21.822 ns )
-From           : ROM:inst3|NEXT_INSTRUCT[12]
-To             : DATA_PATH:DP|Registrador:H|guarda[11]~DUPLICATE
+Actual Time    : 45.82 MHz ( period = 21.824 ns )
+From           : ROM:inst3|NEXT_INSTRUCT[17]
+To             : DATA_PATH:DP|Registrador:SP|guarda[29]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
