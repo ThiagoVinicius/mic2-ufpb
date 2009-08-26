@@ -134,7 +134,7 @@ istore5:   TOS = MDR; goto Main1
 
 iIF_CMP_EQ:
 iif_cmp_eq1   MAR = SP = SP - 1; rd
-iif_cmp_eq2   MAR = SP = SP; rd
+iif_cmp_eq2   MAR = SP = SP -1
 iif_cmp_eq3   OPC = TOS
 iif_cmp_eq4   TOS = MDR
 iif_cmp_eq5   Z = OPC - MDR; if (Z) goto T; else goto F
