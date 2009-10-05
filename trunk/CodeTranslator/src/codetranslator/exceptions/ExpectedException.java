@@ -3,14 +3,14 @@
  * and open the template in the editor.
  */
 
-package javatoijvm.exceptions;
+package codetranslator.exceptions;
 
 /**
  *
  * @author Erisvaldo
  */
-public class UndefinedException extends Exception {
-    public UndefinedException(String message) {
+public class ExpectedException extends Exception {
+    public ExpectedException(String message) {
         super(message);
     }
 }

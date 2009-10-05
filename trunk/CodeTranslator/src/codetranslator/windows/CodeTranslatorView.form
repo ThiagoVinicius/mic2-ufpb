@@ -244,10 +244,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="newProject" methodName="newProject"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="newProject" methodName="newProject"/>
                 </Property>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Shift+Ctrl+N"/>
+                  <KeyStroke key="Ctrl+N"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem1.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem1" noResource="true"/>
@@ -256,10 +256,10 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="openProject" methodName="openProject"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="openProject" methodName="openProject"/>
                 </Property>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Shift+Ctrl+O"/>
+                  <KeyStroke key="Ctrl+A"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem2.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem2" noResource="true"/>
@@ -268,7 +268,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="saveProject" methodName="saveProject"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="saveProject" methodName="saveProject"/>
                 </Property>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+S"/>
@@ -280,7 +280,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="saveProjectAs" methodName="saveProjectAs"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="saveProjectAs" methodName="saveProjectAs"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem12.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem12" noResource="true"/>
@@ -306,7 +306,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="clearInput" methodName="clearInput"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="clearInput" methodName="clearInput"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem8.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem8" noResource="true"/>
@@ -315,7 +315,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.JavaToIJVMView" id="clearOutput" methodName="clearOutput"/>
+                  <action class="codetranslator.JavaToIJVMView" id="clearOutput" methodName="clearOutput"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem7.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem7" noResource="true"/>
@@ -324,7 +324,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="clearX86" methodName="clearX86"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="clearX86" methodName="clearX86"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem10.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem10" noResource="true"/>
@@ -333,7 +333,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="clearIJVM" methodName="clearIJVM"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="clearIJVM" methodName="clearIJVM"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem11.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem11" noResource="true"/>
@@ -347,7 +347,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="clearAll" methodName="clearAll"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="clearAll" methodName="clearAll"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="jMenuItem9.text"/>
                 <Property name="name" type="java.lang.String" value="jMenuItem9" noResource="true"/>
@@ -364,7 +364,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="generateX86Code" methodName="generateX86Code"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="generateX86Code" methodName="generateX86Code"/>
                 </Property>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="F5"/>
@@ -376,7 +376,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="generateIJVMCode" methodName="generateIJVMCode"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="generateIJVMCode" methodName="generateIJVMCode"/>
                 </Property>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="F6"/>
@@ -425,7 +425,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="showHelpBox" methodName="showHelpBox"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="showHelpBox" methodName="showHelpBox"/>
                 </Property>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="F1"/>
@@ -437,7 +437,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="aboutMenuItem">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="javatoijvm.windows.JavaToIJVMView" id="showAboutBox" methodName="showAboutBox"/>
+                  <action class="codetranslator.windows.JavaToIJVMView" id="showAboutBox" methodName="showAboutBox"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="aboutMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="aboutMenuItem" noResource="true"/>

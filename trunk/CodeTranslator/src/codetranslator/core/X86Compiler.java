@@ -1,10 +1,10 @@
-package javatoijvm.core;
+package codetranslator.core;
 
 import java.util.Scanner;
-import javatoijvm.exceptions.DuplicatedException;
-import javatoijvm.exceptions.ExpectedException;
-import javatoijvm.exceptions.FatalException;
-import javatoijvm.exceptions.UndefinedException;
+import codetranslator.exceptions.DuplicatedException;
+import codetranslator.exceptions.ExpectedException;
+import codetranslator.exceptions.FatalException;
+import codetranslator.exceptions.UndefinedException;
 
 /**
  *

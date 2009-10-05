@@ -2,13 +2,13 @@
  * JavaToIJVMAboutBox.java
  */
 
-package javatoijvm.windows;
+package codetranslator.windows;
 
 import org.jdesktop.application.Action;
 
-public class JavaToIJVMAboutBox extends javax.swing.JDialog {
+public class CodeTranslatorAboutBox extends javax.swing.JDialog {
 
-    public JavaToIJVMAboutBox(java.awt.Frame parent) {
+    public CodeTranslatorAboutBox(java.awt.Frame parent) {
         super(parent);
         initComponents();
         getRootPane().setDefaultButton(closeButton);
@@ -38,13 +38,13 @@ public class JavaToIJVMAboutBox extends javax.swing.JDialog {
         javax.swing.JLabel imageLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(javatoijvm.JavaToIJVMApp.class).getContext().getResourceMap(JavaToIJVMAboutBox.class);
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(codetranslator.CodeTranslatorApp.class).getContext().getResourceMap(CodeTranslatorAboutBox.class);
         setTitle(resourceMap.getString("title")); // NOI18N
         setModal(true);
         setName("aboutBox"); // NOI18N
         setResizable(false);
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(javatoijvm.JavaToIJVMApp.class).getContext().getActionMap(JavaToIJVMAboutBox.class, this);
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(codetranslator.CodeTranslatorApp.class).getContext().getActionMap(CodeTranslatorAboutBox.class, this);
         closeButton.setAction(actionMap.get("closeAboutBox")); // NOI18N
         closeButton.setText(resourceMap.getString("closeButton.text")); // NOI18N
         closeButton.setName("closeButton"); // NOI18N

@@ -2,18 +2,18 @@
  * JavaToIJVMAboutBox.java
  */
 
-package javatoijvm.windows;
+package codetranslator.windows;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javatoijvm.core.Constants;
+import codetranslator.core.Constants;
 import org.jdesktop.application.Action;
 
-public class JavaToIJVMHelpBox extends javax.swing.JDialog {
+public class CodeTranslatorHelpBox extends javax.swing.JDialog {
 
-    public JavaToIJVMHelpBox(java.awt.Frame parent) {
+    public CodeTranslatorHelpBox(java.awt.Frame parent) {
         super(parent);
         initComponents();
         getRootPane().setDefaultButton(closeButton);
@@ -35,7 +35,7 @@ public class JavaToIJVMHelpBox extends javax.swing.JDialog {
 
             helpTextArea.setText(text);
         } catch (Exception ex) {
-            Logger.getLogger(JavaToIJVMHelpBox.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CodeTranslatorHelpBox.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -59,13 +59,13 @@ public class JavaToIJVMHelpBox extends javax.swing.JDialog {
         helpTextArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(javatoijvm.JavaToIJVMApp.class).getContext().getResourceMap(JavaToIJVMHelpBox.class);
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(codetranslator.CodeTranslatorApp.class).getContext().getResourceMap(CodeTranslatorHelpBox.class);
         setTitle(resourceMap.getString("title")); // NOI18N
         setModal(true);
         setName("aboutBox"); // NOI18N
         setResizable(false);
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(javatoijvm.JavaToIJVMApp.class).getContext().getActionMap(JavaToIJVMHelpBox.class, this);
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(codetranslator.CodeTranslatorApp.class).getContext().getActionMap(CodeTranslatorHelpBox.class, this);
         closeButton.setAction(actionMap.get("closeAboutBox")); // NOI18N
         closeButton.setText(resourceMap.getString("closeButton.text")); // NOI18N
         closeButton.setName("closeButton"); // NOI18N

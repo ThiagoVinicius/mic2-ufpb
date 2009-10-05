@@ -3,14 +3,14 @@
  * and open the template in the editor.
  */
 
-package javatoijvm.exceptions;
+package codetranslator.exceptions;
 
 /**
  *
  * @author Erisvaldo
  */
-public class DuplicatedException extends Exception {
-    public DuplicatedException(String message) {
+public class OpenProjectException extends Exception {
+    public OpenProjectException(String message) {
         super(message);
     }
 }

@@ -3,14 +3,14 @@
  * and open the template in the editor.
  */
 
-package javatoijvm.exceptions;
+package codetranslator.exceptions;
 
 /**
  *
  * @author Erisvaldo
  */
-public class SaveProjectException extends Exception {
-    public SaveProjectException(String message) {
+public class UndefinedException extends Exception {
+    public UndefinedException(String message) {
         super(message);
     }
 }
