@@ -1,18 +1,18 @@
-package javatoijvm.core;
+package codetranslator.core;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import javatoijvm.windows.JavaToIJVMView;
-import javatoijvm.exceptions.DuplicatedException;
-import javatoijvm.exceptions.ExpectedException;
-import javatoijvm.exceptions.FatalException;
-import javatoijvm.exceptions.OpenProjectException;
-import javatoijvm.exceptions.SaveProjectException;
-import javatoijvm.exceptions.UndefinedException;
-import javatoijvm.util.ExtensionFileFilter;
+import codetranslator.windows.CodeTranslatorView;
+import codetranslator.exceptions.DuplicatedException;
+import codetranslator.exceptions.ExpectedException;
+import codetranslator.exceptions.FatalException;
+import codetranslator.exceptions.OpenProjectException;
+import codetranslator.exceptions.SaveProjectException;
+import codetranslator.exceptions.UndefinedException;
+import codetranslator.util.ExtensionFileFilter;
 import javax.swing.JFileChooser;
 
 /**
@@ -39,7 +39,7 @@ public class Controller {
         return compiler;
     }
 
-    public void generateIJVMCode(String inputCode, JavaToIJVMView view) {
+    public void generateIJVMCode(String inputCode, CodeTranslatorView view) {
         compiler = IJVMCompiler.getInstance();
         String prefix = "[IJVM] ";
 
@@ -60,7 +60,7 @@ public class Controller {
         }
     }
 
-    public void generateX86Code(String inputCode, JavaToIJVMView view) {
+    public void generateX86Code(String inputCode, CodeTranslatorView view) {
         compiler = X86Compiler.getInstance();
         String prefix = "[80x86] ";
 
@@ -79,7 +79,7 @@ public class Controller {
         }
     }
 
-    public void openProject(String filename, JavaToIJVMView view) throws OpenProjectException {
+    public void openProject(String filename, CodeTranslatorView view) throws OpenProjectException {
         try {
             String selectedFile = filename;
             String aux = selectedFile.endsWith(".ct") ? selectedFile.substring(0, selectedFile.indexOf(".ct")) : selectedFile;
@@ -142,7 +142,7 @@ public class Controller {
         }
     }
 
-    public void openProject(JavaToIJVMView view) throws OpenProjectException {
+    public void openProject(CodeTranslatorView view) throws OpenProjectException {
         try {
             JFileChooser chooser = new JFileChooser();
             chooser.setAcceptAllFileFilterUsed(false);
@@ -215,7 +215,7 @@ public class Controller {
         }
     }
 
-    public void saveProjectAs(JavaToIJVMView view) throws SaveProjectException, OpenProjectException {
+    public void saveProjectAs(CodeTranslatorView view) throws SaveProjectException, OpenProjectException {
         JFileChooser chooser = new JFileChooser();
         chooser.setAcceptAllFileFilterUsed(false);
         chooser.setFileFilter(new ExtensionFileFilter("Projetos do Code Translator", "ct"));
@@ -249,7 +249,7 @@ public class Controller {
         }
     }
 
-    private void addOutputText(String outputText, JavaToIJVMView view) {
+    private void addOutputText(String outputText, CodeTranslatorView view) {
         // Get current time
         GregorianCalendar gc = new GregorianCalendar();
         String currentTimeString = gc.get(Calendar.HOUR_OF_DAY) + ":" + gc.get(Calendar.MINUTE) + ":" + ( gc.get(Calendar.SECOND) < 10 ? "0" + gc.get(Calendar.SECOND) : gc.get(Calendar.SECOND) );

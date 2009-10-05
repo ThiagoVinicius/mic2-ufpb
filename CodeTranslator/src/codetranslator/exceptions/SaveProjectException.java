@@ -3,14 +3,14 @@
  * and open the template in the editor.
  */
 
-package javatoijvm.exceptions;
+package codetranslator.exceptions;
 
 /**
  *
  * @author Erisvaldo
  */
-public class FatalException extends Exception {
-    public FatalException(String message) {
+public class SaveProjectException extends Exception {
+    public SaveProjectException(String message) {
         super(message);
     }
 }

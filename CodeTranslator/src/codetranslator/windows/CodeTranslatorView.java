@@ -2,11 +2,11 @@
  * JavaToIJVMView.java
  */
 
-package javatoijvm.windows;
+package codetranslator.windows;
 
-import javatoijvm.*;
-import javatoijvm.exceptions.OpenProjectException;
-import javatoijvm.exceptions.SaveProjectException;
+import codetranslator.*;
+import codetranslator.exceptions.OpenProjectException;
+import codetranslator.exceptions.SaveProjectException;
 import org.jdesktop.application.Action;
 import org.jdesktop.application.ResourceMap;
 import org.jdesktop.application.SingleFrameApplication;
@@ -14,8 +14,8 @@ import org.jdesktop.application.FrameView;
 import org.jdesktop.application.TaskMonitor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javatoijvm.core.Constants;
-import javatoijvm.core.Controller;
+import codetranslator.core.Constants;
+import codetranslator.core.Controller;
 import javax.swing.Timer;
 import javax.swing.Icon;
 import javax.swing.JDialog;
@@ -26,9 +26,9 @@ import org.jdesktop.application.Application;
 /**
  * The application's main frame.
  */
-public class JavaToIJVMView extends FrameView {
+public class CodeTranslatorView extends FrameView {
 
-    public JavaToIJVMView(SingleFrameApplication app) {
+    public CodeTranslatorView(SingleFrameApplication app) {
         super(app);
 
         initComponents();
@@ -92,21 +92,21 @@ public class JavaToIJVMView extends FrameView {
     @Action
     public void showAboutBox() {
         if (aboutBox == null) {
-            JFrame mainFrame = JavaToIJVMApp.getApplication().getMainFrame();
-            aboutBox = new JavaToIJVMAboutBox(mainFrame);
+            JFrame mainFrame = CodeTranslatorApp.getApplication().getMainFrame();
+            aboutBox = new CodeTranslatorAboutBox(mainFrame);
             aboutBox.setLocationRelativeTo(mainFrame);
         }
-        JavaToIJVMApp.getApplication().show(aboutBox);
+        CodeTranslatorApp.getApplication().show(aboutBox);
     }
 
     @Action
     public void showHelpBox() {
         if (helpBox == null) {
-            JFrame mainFrame = JavaToIJVMApp.getApplication().getMainFrame();
-            helpBox = new JavaToIJVMHelpBox(mainFrame);
+            JFrame mainFrame = CodeTranslatorApp.getApplication().getMainFrame();
+            helpBox = new CodeTranslatorHelpBox(mainFrame);
             helpBox.setLocationRelativeTo(mainFrame);
         }
-        JavaToIJVMApp.getApplication().show(helpBox);
+        CodeTranslatorApp.getApplication().show(helpBox);
     }
 
 
@@ -171,7 +171,7 @@ public class JavaToIJVMView extends FrameView {
         mainPanel.setRequestFocusEnabled(false);
 
         jLabelInput.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(javatoijvm.JavaToIJVMApp.class).getContext().getResourceMap(JavaToIJVMView.class);
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(codetranslator.CodeTranslatorApp.class).getContext().getResourceMap(CodeTranslatorView.class);
         jLabelInput.setText(resourceMap.getString("jLabelInput.text")); // NOI18N
         jLabelInput.setName("jLabelInput"); // NOI18N
 
@@ -294,15 +294,15 @@ public class JavaToIJVMView extends FrameView {
         fileMenu.setText(resourceMap.getString("fileMenu.text")); // NOI18N
         fileMenu.setName("fileMenu"); // NOI18N
 
-        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(javatoijvm.JavaToIJVMApp.class).getContext().getActionMap(JavaToIJVMView.class, this);
+        javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(codetranslator.CodeTranslatorApp.class).getContext().getActionMap(CodeTranslatorView.class, this);
         jMenuItem1.setAction(actionMap.get("newProject")); // NOI18N
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText(resourceMap.getString("jMenuItem1.text")); // NOI18N
         jMenuItem1.setName("jMenuItem1"); // NOI18N
         fileMenu.add(jMenuItem1);
 
         jMenuItem2.setAction(actionMap.get("openProject")); // NOI18N
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setText(resourceMap.getString("jMenuItem2.text")); // NOI18N
         jMenuItem2.setName("jMenuItem2"); // NOI18N
         fileMenu.add(jMenuItem2);
@@ -633,7 +633,7 @@ public class JavaToIJVMView extends FrameView {
     }
 
     public void configureLabels() {
-        ResourceMap resourceMap = Application.getInstance(JavaToIJVMApp.class).getContext().getResourceMap(JavaToIJVMView.class);
+        ResourceMap resourceMap = Application.getInstance(CodeTranslatorApp.class).getContext().getResourceMap(CodeTranslatorView.class);
         
         jLabelTitle.setText(Constants.PROJECT_NAME + ".ct");
         jLabelInput.setText(resourceMap.getString("jLabelInput.text") + " (" + Constants.PROJECT_NAME + ".in)");

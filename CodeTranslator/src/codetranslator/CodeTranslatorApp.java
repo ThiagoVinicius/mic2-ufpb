@@ -2,28 +2,28 @@
  * JavaToIJVMApp.java
  */
 
-package javatoijvm;
+package codetranslator;
 
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javatoijvm.core.Constants;
-import javatoijvm.core.Controller;
-import javatoijvm.exceptions.OpenProjectException;
-import javatoijvm.windows.JavaToIJVMView;
+import codetranslator.core.Constants;
+import codetranslator.core.Controller;
+import codetranslator.exceptions.OpenProjectException;
+import codetranslator.windows.CodeTranslatorView;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
 /**
  * The main class of the application.
  */
-public class JavaToIJVMApp extends SingleFrameApplication {
+public class CodeTranslatorApp extends SingleFrameApplication {
 
     /**
      * At startup create and show the main frame of the application.
      */
     @Override protected void startup() {
-        JavaToIJVMView view = new JavaToIJVMView(this);
+        CodeTranslatorView view = new CodeTranslatorView(this);
 
         File initialFile = new File(Constants.CURRENT_PATH + "/default.ct");
 
@@ -58,14 +58,14 @@ public class JavaToIJVMApp extends SingleFrameApplication {
      * A convenient static getter for the application instance.
      * @return the instance of JavaToIJVMApp
      */
-    public static JavaToIJVMApp getApplication() {
-        return Application.getInstance(JavaToIJVMApp.class);
+    public static CodeTranslatorApp getApplication() {
+        return Application.getInstance(CodeTranslatorApp.class);
     }
 
     /**
      * Main method launching the application.
      */
     public static void main(String[] args) {
-        launch(JavaToIJVMApp.class, args);
+        launch(CodeTranslatorApp.class, args);
     }
 }
