@@ -22,7 +22,7 @@ word'8 is microinstruction inst_160
 
 word'9 is microinstruction inst_161 
 
-word'10 is microinstruction imul2_1 mar = sp
+word'10 is microinstruction imul2_1 mar = sp 
 
 word'11 is microinstruction imul2_2 tos = mdr = tos << 1; wr; goto main 
 
@@ -770,7 +770,7 @@ word'382 is microinstruction inst_384
 
 word'383 is microinstruction t opc = pc -1; fetch; goto goto2 
 
-word'384 is microinstruction inst_999 
+word'384 is microinstruction mult mdr*tos 
 
 word'385 is microinstruction inst_1000 
 
