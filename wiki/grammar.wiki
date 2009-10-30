@@ -27,7 +27,7 @@ ASSIGNMENT -> [name] = ASSIGNMENT | [name] = ULA_SHIFT
 
 ULA_SHIFT -> ULA | ULA << 8 | ULA << 1 | ULA >> 1 #unicas derivação à esquerda.
 
-ULA -> [name] | not [name] | neg [name] | [name] + [name] + 1 | [name] + [name] | [name] + 1 | [name] - 1 | [name] - [name] | [name] and [name] | [name] or [name] | 0 | 1 | -1
+ULA -> [name] | not [name] | neg [name] | [name] + [name] + 1 | [name] + [name]| [name] * [name] | [name] + 1 | [name] - 1 | [name] - [name] | [name] and [name] | [name] or [name] | 0 | 1 | -1
 
 MEMORY -> rd | wr | fetch
 
