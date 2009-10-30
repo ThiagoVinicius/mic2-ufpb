@@ -14,7 +14,7 @@ Peço encarecidamente que quem puder dar uma olhada e verificar, que o faça, as
 {{{
 A gramatica atual é:
 
-Símbolos de alta precedência (separados por espacos): + - ; << >> =
+Símbolos de alta precedência (separados por espacos): * + - ; << >> =
 
 
 [name] := "([a-zA-Z])+(\\w)*" #Java regex
