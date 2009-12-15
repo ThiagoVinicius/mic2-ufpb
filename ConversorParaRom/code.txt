@@ -66,7 +66,7 @@ word'30 is microinstruction isub1 MAR = SP = SP - 1; rd
 
 word'31 is microinstruction isub2 
 
-word'32 is microinstruction isub3 MDR = TOS = MDR - TOS; wr; goto main 
+word'32 is microinstruction isub3 MDR = TOS = TOS - MDR; wr; goto main 
 
 word'33 is microinstruction inst_102 
 
@@ -360,33 +360,33 @@ word'177 is microinstruction lnext5 mar = sp = sp + 1; wr; goto main
 
 word'178 is microinstruction inst_1234 
 
-word'179 is microinstruction inst_179 
+word'179 is microinstruction idiv1 mar = sp = sp-1; rd; goto idiv2 
 
-word'180 is microinstruction inst_180 
+word'180 is microinstruction idiv2 opc = lv = 1; goto idiv2_1 
 
-word'181 is microinstruction inst_181 
+word'181 is microinstruction idiv2_1 opc << 5; goto idiv3 
 
-word'182 is microinstruction inst_182 
+word'182 is microinstruction idiv3 h = tos; goto idiv4 
 
-word'183 is microinstruction inst_183 
+word'183 is microinstruction idiv4 cpp = 0; goto idiv5 
 
-word'184 is microinstruction inst_184 
+word'184 is microinstruction idiv011_1 h = h and lv; goto idiv11 
 
-word'185 is microinstruction inst_185 
+word'185 is microinstruction idiv6 h << 1; goto idiv7 
 
-word'186 is microinstruction inst_186 
+word'186 is microinstruction idiv7 cpp = cpp - mdr; if n goto idiv08 else goto idiv8 
 
-word'187 is microinstruction inst_187 
+word'187 is microinstruction idiv8 cpp << 1; goto idiv9 
 
-word'188 is microinstruction inst_188 
+word'188 is microinstruction idiv9 h << 1; goto idiv10 
 
-word'189 is microinstruction inst_189 
+word'189 is microinstruction idiv10 h = h or lv; goto idiv11 
 
-word'190 is microinstruction inst_190 
+word'190 is microinstruction idiv11 opc = opc - 1; if z goto idiv15 else goto idiv5 
 
 word'191 is microinstruction inst_191 
 
-word'192 is microinstruction inst_192 
+word'192 is microinstruction idiv5 cpp << 1; goto idiv6 
 
 word'193 is microinstruction inst_193 
 
@@ -888,23 +888,23 @@ word'441 is microinstruction inst_441
 
 word'442 is microinstruction inst_442 
 
-word'443 is microinstruction inst_443 
+word'443 is microinstruction idiv08 cpp = cpp + mdr; goto idiv09 
 
-word'444 is microinstruction inst_444 
+word'444 is microinstruction idiv09 cpp << 1; goto idiv010 
 
-word'445 is microinstruction inst_445 
+word'445 is microinstruction idiv010 h << 1; goto idiv011 
 
-word'446 is microinstruction inst_446 
+word'446 is microinstruction idiv011 lv = not lv; goto idiv011_1 
 
 word'447 is microinstruction inst_447 
 
-word'448 is microinstruction inst_448 
+word'448 is microinstruction idiv15 cpp >> 1; goto idiv16 
 
-word'449 is microinstruction inst_449 
+word'449 is microinstruction idiv16 mdr = cpp; wr; goto idiv17 
 
-word'450 is microinstruction inst_450 
+word'450 is microinstruction idiv17 mar = sp = sp + 1; goto idiv18 
 
-word'451 is microinstruction inst_451 
+word'451 is microinstruction idiv18 mdr = tos = h; wr; goto main 
 
 word'452 is microinstruction inst_452 
 
