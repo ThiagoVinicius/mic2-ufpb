@@ -1,4 +1,4 @@
-package analisador.util;
+package codetranslator.util;
 
 import java.io.File;
 import java.util.List;

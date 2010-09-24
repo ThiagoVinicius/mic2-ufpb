@@ -1,4 +1,4 @@
-package analisador.exceptions;
+package codetranslator.exceptions;
 
 /**
  *
