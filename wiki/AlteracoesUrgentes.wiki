@@ -1,5 +1,5 @@
 #summary Coisas urgentes a serem feitas
-#labels urgent
+#labels urgent,Deprecated
 
 = Introduction =
 
