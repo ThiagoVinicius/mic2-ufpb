@@ -1,5 +1,5 @@
 #summary Vamos ajustar as microinstruções
-#labels problem,urgent,godhelpus
+#labels Deprecated,urgent,godhelpus
 
 = Introduction =
 
