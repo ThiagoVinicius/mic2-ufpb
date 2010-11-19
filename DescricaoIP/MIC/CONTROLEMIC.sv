@@ -18,7 +18,7 @@ module CONTROLEMIC(
     input logic [7:0]inMBR,/*MBR do DATA_PATH*/
     input logic [8:0] ADDR,/*Next Adress da instrucao*/
 	input logic [2:0] JNZC,/*2 <= N || 1 <= Z  || 0 <= C */
-	input logic clk,/*Possivel clk*/	
+	input logic clk,/*Possivel clk*/
 	
 	output logic [8:0] outMPC
 	

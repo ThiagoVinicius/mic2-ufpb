@@ -136,22 +136,6 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 5776 2280 5944 2296)
-	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "Deslc[1..0]" (rect 5 0 59 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 92 12)(pt 117 12)(line_width 1))
-		(line (pt 92 4)(pt 117 4)(line_width 1))
-		(line (pt 121 8)(pt 168 8)(line_width 1))
-		(line (pt 92 12)(pt 92 4)(line_width 1))
-		(line (pt 117 4)(pt 121 8)(line_width 1))
-		(line (pt 117 12)(pt 121 8)(line_width 1))
-	)
-	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
 	(rect 3512 -792 3680 -776)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "enaMAR" (rect 5 0 46 12)(font "Arial" ))
@@ -315,6 +299,22 @@ applicable agreement for further details.
 	(rect 3544 1544 3712 1560)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "enaH" (rect 5 0 30 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 5776 2280 5944 2296)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "Deslc[7..0]" (rect 5 0 59 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -1322,7 +1322,7 @@ applicable agreement for further details.
 (symbol
 	(rect 5944 2240 6096 2336)
 	(text "Deslocador" (rect 5 0 60 12)(font "Arial" ))
-	(text "DESLOC" (rect 8 80 52 92)(font "Arial" ))
+	(text "inst1" (rect 8 80 31 92)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1333,8 +1333,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "Deslc[1..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "Deslc[1..0]" (rect 21 43 75 55)(font "Arial" ))
+		(text "control[7..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "control[7..0]" (rect 21 43 80 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
