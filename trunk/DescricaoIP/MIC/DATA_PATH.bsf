@@ -152,8 +152,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 320)
 		(input)
-		(text "Deslc[1..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
-		(text "Deslc[1..0]" (rect 21 315 81 329)(font "Arial" (font_size 8)))
+		(text "Deslc[7..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "Deslc[7..0]" (rect 21 315 81 329)(font "Arial" (font_size 8)))
 		(line (pt 0 320)(pt 16 320)(line_width 3))
 	)
 	(port

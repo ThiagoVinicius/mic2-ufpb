@@ -1,5 +1,5 @@
 Assembler report for MIC2
-Mon Aug 24 21:36:49 2009
+Fri Nov 19 11:30:14 2010
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 8.0 Build 215 05/29/2008 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MIC2.sof
-  6. Assembler Device Options: D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MIC2.pof
+  5. Assembler Device Options: C:/Users/Thiago/Desktop/DescricaoIP/MIC/MIC2.sof
+  6. Assembler Device Options: C:/Users/Thiago/Desktop/DescricaoIP/MIC/MIC2.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Aug 24 21:36:49 2009 ;
+; Assembler Status      ; Successful - Fri Nov 19 11:30:14 2010 ;
 ; Revision Name         ; MIC2                                  ;
 ; Top-level Entity Name ; MIC2                                  ;
 ; Family                ; Stratix II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------+
-; Assembler Generated Files                         ;
-+---------------------------------------------------+
-; File Name                                         ;
-+---------------------------------------------------+
-; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MIC2.sof ;
-; D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MIC2.pof ;
-+---------------------------------------------------+
++--------------------------------------------------+
+; Assembler Generated Files                        ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; C:/Users/Thiago/Desktop/DescricaoIP/MIC/MIC2.sof ;
+; C:/Users/Thiago/Desktop/DescricaoIP/MIC/MIC2.pof ;
++--------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Assembler Device Options: D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MIC2.sof ;
-+----------------+------------------------------------------------------------+
-; Option         ; Setting                                                    ;
-+----------------+------------------------------------------------------------+
-; Device         ; EP2S15F484C3                                               ;
-; JTAG usercode  ; 0xFFFFFFFF                                                 ;
-; Checksum       ; 0x0050F829                                                 ;
-+----------------+------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Thiago/Desktop/DescricaoIP/MIC/MIC2.sof ;
++----------------+-----------------------------------------------------------+
+; Option         ; Setting                                                   ;
++----------------+-----------------------------------------------------------+
+; Device         ; EP2S15F484C3                                              ;
+; JTAG usercode  ; 0xFFFFFFFF                                                ;
+; Checksum       ; 0x0072811C                                                ;
++----------------+-----------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Assembler Device Options: D:/Thiago/ufpb/p5/Arq II/DescricaoIP/MIC/MIC2.pof ;
-+--------------------+--------------------------------------------------------+
-; Option             ; Setting                                                ;
-+--------------------+--------------------------------------------------------+
-; Device             ; EPC16                                                  ;
-; JTAG usercode      ; 0xFFFFFFFF                                             ;
-; Checksum           ; 0x1E6BFE81                                             ;
-; Compression Ratio  ; 2                                                      ;
-+--------------------+--------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Thiago/Desktop/DescricaoIP/MIC/MIC2.pof ;
++--------------------+-------------------------------------------------------+
+; Option             ; Setting                                               ;
++--------------------+-------------------------------------------------------+
+; Device             ; EPC16                                                 ;
+; JTAG usercode      ; 0xFFFFFFFF                                            ;
+; Checksum           ; 0x1E00158A                                            ;
+; Compression Ratio  ; 2                                                     ;
++--------------------+-------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 8.0 Build 215 05/29/2008 SJ Web Edition
-    Info: Processing started: Mon Aug 24 21:36:42 2009
+    Info: Processing started: Fri Nov 19 11:30:07 2010
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MIC2 -c MIC2
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 227 megabytes
-    Info: Processing ended: Mon Aug 24 21:36:49 2009
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 234 megabytes
+    Info: Processing ended: Fri Nov 19 11:30:15 2010
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.682 ns
+Actual Time    : 99.425 ns
 From           : reset
-To             : DATA_PATH:DP|Registrador:SP|guarda[29]
+To             : DATA_PATH:inst7|Registrador:LV|guarda[31]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.828 ns
-From           : DATA_PATH:DP|MBR:mbr|MBR_Reg[7]
-To             : Z
+Actual Time    : 101.566 ns
+From           : ROM:inst6|NEXT_INSTRUCT[12]
+To             : C[20]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 18.320 ns
+Actual Time    : 103.964 ns
 From           : reset
-To             : Z
+To             : C[20]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -2.719 ns
+Actual Time    : 0.830 ns
 From           : reset
-To             : DATA_PATH:DP|MAR:inst|outMemPrinc[9]
+To             : DATA_PATH:inst7|Deslocador:inst1|B[1]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -45,12 +45,22 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 45.82 MHz ( period = 21.824 ns )
-From           : ROM:inst3|NEXT_INSTRUCT[17]
-To             : DATA_PATH:DP|Registrador:SP|guarda[29]
+Actual Time    : 5.15 MHz ( period = 194.054 ns )
+From           : ROM:inst6|NEXT_INSTRUCT[12]
+To             : DATA_PATH:inst7|Registrador:LV|guarda[31]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ROM:inst6|NEXT_INSTRUCT[19]
+To             : DATA_PATH:inst7|Deslocador:inst1|B[6]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 399
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 399
 
 --------------------------------------------------------------------------------------
 

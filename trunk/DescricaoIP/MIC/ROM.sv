@@ -24,7 +24,7 @@ module ROM(
 	output logic [8:0]Next_ADDR,
 	output logic [2:0]JAM,
 	output logic [5:0]ALU,
-	output logic [1:0]DESL_R,
+	output logic [7:0]DESL_R,
 	output logic [3:0]A,
 	output logic [2:0]B,
 	output logic enaMAR,
@@ -40,8 +40,8 @@ module ROM(
 	output logic [38:0] q1	//so para testes
 );
 
-	wire [38:0] sub_wire0;
-	wire [38:0] q = sub_wire0[38:0];
+	wire [44:0] sub_wire0;
+	wire [44:0] q = sub_wire0[44:0];
 
 	altsyncram	altsyncram_component (
 				.clock0 (clk),
@@ -79,10 +79,10 @@ module ROM(
 		altsyncram_component.outdata_aclr_a = "NONE",
 		altsyncram_component.outdata_reg_a = "UNREGISTERED",
 		altsyncram_component.widthad_a = 9,
-		altsyncram_component.width_a = 39,
+		altsyncram_component.width_a = 44,
 		altsyncram_component.width_byteena_a = 1;													
 										
-logic [38:0] NEXT_INSTRUCT =39'b0 ;// = 39'b000000000000000000000000000000000000000;
+logic [44:0] NEXT_INSTRUCT =44'b0 ;// = 39'b000000000000000000000000000000000000000;
 
 
 // This construct should be used to infer sequential logic such as
@@ -91,11 +91,11 @@ logic [38:0] NEXT_INSTRUCT =39'b0 ;// = 39'b000000000000000000000000000000000000
 	begin
 		// Statements
 		if(reset)begin //No reset devemos configurar para fazer nada mais ainda falta definir a instrucao
-			NEXT_INSTRUCT <= 39'b000000000000000000000000000000000000000;//39'b000000001001000000000001001001000000000;
+			NEXT_INSTRUCT <= 44'b000000000000000000000000000000000000000000000;//39'b000000001001000000000001001001000000000;
 		end else begin
 			if(READ) begin
 			    //NEXT_INSTRUCT <= MICROPROGRAMA[MPC][38:0];			    
-			    NEXT_INSTRUCT <= q[38:0];			    
+			    NEXT_INSTRUCT <= q[44:0];			    
 			end
 		end
 	end
@@ -106,10 +106,10 @@ begin
 
 		
 	// Statements
-			    Next_ADDR 	= NEXT_INSTRUCT[38:30];
-				JAM 	  	= NEXT_INSTRUCT[29:27];
-				ALU 		= NEXT_INSTRUCT[26:21];
-				DESL_R 		= NEXT_INSTRUCT[20:19];
+			    Next_ADDR 	= NEXT_INSTRUCT[44:36];
+				JAM 	  	= NEXT_INSTRUCT[35:33];
+				ALU 		= NEXT_INSTRUCT[32:27];
+				DESL_R 		= NEXT_INSTRUCT[26:19];		
 				A 			= NEXT_INSTRUCT[18:15];
 				B 			= NEXT_INSTRUCT[14:12];
 				enaMAR      = NEXT_INSTRUCT[11];
