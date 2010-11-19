@@ -1,0 +1,21 @@
+#summary Pequeno guia demonstrando como utilizar os componentes deste projeto.
+#labels Featured
+
+= Introdução =
+
+Este projeto tem o objetivo de implementar um exemplar funcional do processador MIC-2, descrito por Tanembaum, em sua Obra "Organização Estruturada de Computadores". Juntamente com o processador, também são fornecidos um editor de micro-instruções e um compilador de pseudo-Pascal para código Assembly IJVM. Há porém um gap, pois não há assembler de IJVM implementado para este projeto.
+
+
+= Hardware =
+
+A MIC-2 está implementada em SystemVerilog, utilizando o CAD Quartus II, da Altera. A implementação é composta de 15 módulos, interligados entre si.
+
+= Editor de microinstruções = 
+
+A MIC-2 utiliza uma ROM de controle de 39bx512, contendo o microcódigo necessário para ativar cada um dos passos necessários para a execução de instruções. O editor de microinstruções expõe uma interface gráfica que permite a edição de microinstruções em linguagem de "alto-nível". O editor então gera uma saída em formato MIF, entendido pelo Quartus II e pela implementação de hardware da MIC2.
+
+Isso nos permite programar o funcionamento interno do processador e a execução de instruções. O conjunto atual de microinstruções pode ser visto [http://code.google.com/p/mic2-ufpb/source/browse/trunk/ConversorParaRom/memory.mif aqui]
+
+O editor pode ser baixado diretamente do SVN: [http://code.google.com/p/mic2-ufpb/source/browse/trunk/#trunk/ConversorParaRom clique].
+
+=  = 
