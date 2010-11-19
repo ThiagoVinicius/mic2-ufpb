@@ -1,4 +1,5 @@
 #summary Sobre a filosofia deste projeto
+#labels Deprecated
 
 = Introduction =
 
